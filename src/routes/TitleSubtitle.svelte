@@ -4,7 +4,7 @@
 	export let title: string;
 	export let subtitle: string;
 
-	let fontSize: string;
+	let fontSize: number;
 
 	onMount(() => {
 		updateFontSize();
@@ -16,28 +16,21 @@
 	});
 
 	function updateFontSize() {
-		fontSize = window.innerWidth / 20 + 'px';
+		fontSize = window.innerWidth / 25;
+		if (fontSize > 90) {
+			fontSize = 90;
+		}
 	}
 </script>
 
-<div class="titleSubtitleBox">
-	<div class="titleBox">
-		<h1 style="font-size: {fontSize}">{title}</h1>
-	</div>
-	<h2 style="font-size: {fontSize}">{subtitle}</h2>
+<div class="titleBox">
+	<h1 style="font-size: {fontSize}px">{title}</h1>
 </div>
+<h2 style="font-size: {fontSize}px">{subtitle}</h2>
 
 <style>
-	.titleSubtitleBox {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		height: 100vh;
-		width: 100%;
-	}
 	.titleBox {
-		padding: 0 20px;
+		padding: 0 2%;
 		background-color: #06cb79;
 	}
 </style>

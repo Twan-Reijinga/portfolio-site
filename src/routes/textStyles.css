@@ -18,3 +18,21 @@ h2::after {
 	content: '.';
 	color: #06cb79;
 }
+
+h3 {
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 600;
+	color: #fff;
+	font-size: 40px;
+}
+h3 span {
+	text-decoration: underline #06cb79 3px;
+}
+
+h4 {
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 200;
+	font-style: italic;
+	color: #fff;
+	font-size: 24px;
+}
