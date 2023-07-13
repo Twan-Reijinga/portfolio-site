@@ -1,6 +1,13 @@
 <script lang="ts">
-    const num: number = 1;
+	import './global.css';
+	import TitleSubtitle from './TitleSubtitle.svelte';
 </script>
 
-<h1>Welcome to SvelteKit {num}</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<section>
+	<TitleSubtitle title="Hello World" subtitle="I'm Twan" />
+	<!-- <div class="titleBox">
+		<h1>Hello World!</h1>
+	</div>
+
+	<h2>I'm Twan</h2> -->
+</section>
