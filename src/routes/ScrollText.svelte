@@ -1,5 +1,9 @@
+<script lang="ts">
+	export let fontSize: number;
+</script>
+
 <div class="textBox">
-	<h4>// Scroll to explore</h4>
+	<h4 style="font-size: {fontSize / 3}px">// Scroll to explore</h4>
 </div>
 
 <style>

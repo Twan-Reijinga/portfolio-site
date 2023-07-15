@@ -1,13 +1,31 @@
 <script lang="ts">
+	import { onMount, afterUpdate } from 'svelte';
+	import { updateFontSize } from '../util';
 	import './global.css';
-	import TitleSubtitle from './TitleSubtitle.svelte';
+	import TitleSubtitle from './TitleSubtitles.svelte';
 	import ScrollText from './ScrollText.svelte';
+
+	let fontSize: number;
+	onMount(() => {
+		window.addEventListener('resize', () => {
+			fontSize = updateFontSize();
+		});
+	});
+
+	afterUpdate(() => {
+		fontSize = updateFontSize();
+	});
 </script>
 
 <section class="centeredSection">
-	<TitleSubtitle title="Hello World" subtitle="I'm Twan" />
+	<TitleSubtitle
+		title="Hello World"
+		subtitle="I'm Twan"
+		comment="// 17 year old web-, app- and AI-programmer"
+		{fontSize}
+	/>
+	<ScrollText {fontSize} />
 </section>
-<ScrollText />
 
 <style>
 	.centeredSection {
