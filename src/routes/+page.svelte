@@ -2,6 +2,7 @@
 	import { onMount, afterUpdate } from 'svelte';
 	import { updateFontSize } from '../util';
 	import './global.css';
+	import SpaceBackground from './SpaceBackground.svelte';
 	import TitleSubtitle from './TitleSubtitles.svelte';
 	import ScrollText from './ScrollText.svelte';
 
@@ -17,6 +18,7 @@
 	});
 </script>
 
+<SpaceBackground />
 <section class="centeredSection">
 	<TitleSubtitle
 		title="Hello World"
