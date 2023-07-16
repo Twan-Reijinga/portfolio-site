@@ -17,6 +17,7 @@
 		position: fixed;
 		background-size: contain;
 		background-repeat: no-repeat;
+		z-index: -1;
 	}
 	.world {
 		background-image: url('$lib/assets/images/world.gif');
