@@ -42,7 +42,13 @@
 		{/if}
 		<!-- </div> -->
 	</section>
-	<section class="right" />
+	<section class="right">
+		<h3>
+			<span>Programming</span> is, apart from <span>skiing</span>, the greatest thing there is.
+			Besides programming, you can find me <span>rowing</span> on the Amstel River or giving
+			<span>sailinstuction</span> in Loosdrecht.
+		</h3>
+	</section>
 {/if}
 
 <style>
