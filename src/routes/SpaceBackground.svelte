@@ -1,5 +1,6 @@
 <script lang="ts">
 	import SpaceObjects from './SpaceObjects.svelte';
+	import FadeIn from './FadeIn.svelte';
 	interface Dot {
 		size: 'small' | 'medium' | 'large';
 		x: number;
@@ -37,25 +38,27 @@
 	];
 	let halfCircles: HalfCircle[] = [
 		{ size: 'medium', x: 25, y: 70, rotation: 80 },
-		{ size: 'small', x: 80, y: 80, rotation: 0 }
+		{ size: 'small', x: 65, y: 85, rotation: 0 }
 	];
 </script>
 
 <div class="dots">
 	{#each dots as dot, i}
-		<span class={dot.size} style="margin: {dot.y}vh 0 0 {dot.x}%" />
+		<FadeIn delay={100} duraction={500}>
+			<span class={dot.size} style="margin: {dot.y}vh 0 0 {dot.x}%" />
+		</FadeIn>
 	{/each}
 </div>
 <div class="circles">
 	{#each circles as circle, i}
-		<span class={circle.size} style="margin: {circle.y}vh 0 0 {circle.x}%" />
+		<span class={circle.size} style="margin: {circle.y}vh 0 0 {circle.x}%;" />
 	{/each}
 </div>
 <div class="halfCircles">
 	{#each halfCircles as halfCircle, i}
 		<span
 			class={halfCircle.size}
-			style="margin: {halfCircle.y}vh 0 0 {halfCircle.x}%; transform: rotate({halfCircle.rotation}deg)"
+			style="margin: {halfCircle.y}vh 0 0 {halfCircle.x}%; transform: rotate({halfCircle.rotation}deg);"
 		/>
 	{/each}
 </div>
