@@ -1,4 +1,5 @@
 <script lang="ts">
+	import SpaceObjects from './SpaceObjects.svelte';
 	interface Dot {
 		size: 'small' | 'medium' | 'large';
 		x: number;
@@ -58,6 +59,7 @@
 		/>
 	{/each}
 </div>
+<SpaceObjects />
 
 <style>
 	.dots * {
