@@ -21,7 +21,7 @@
 <SpaceBackground />
 <section class="centeredSection">
 	<TitleSubtitle
-		title="Hello World"
+		title="Hello World!"
 		subtitle="I'm Twan"
 		comment="// 17 year old web-, app- and AI-programmer"
 		{fontSize}

@@ -1,16 +1,25 @@
 <script lang="ts">
-	interface dotInterface {
+	interface Dot {
 		size: 'small' | 'medium' | 'large';
 		x: number;
 		y: number;
 	}
-	let dots: dotInterface[] = [
+	interface Circle {
+		size: 'small' | 'medium';
+		x: number;
+		y: number;
+	}
+	type HalfCircle = Circle & {
+		rotation: number;
+	};
+
+	let dots: Dot[] = [
 		{ size: 'medium', x: 10, y: 20 },
 		{ size: 'small', x: 25, y: 12 },
 		{ size: 'medium', x: 38, y: 16 },
 		{ size: 'large', x: 55, y: 20 },
 		{ size: 'small', x: 62, y: 42 },
-		{ size: 'small', x: 85, y: 38 },
+		{ size: 'medium', x: 85, y: 38 },
 		{ size: 'small', x: 88, y: 12 },
 		{ size: 'small', x: 90, y: 60 },
 		{ size: 'small', x: 60, y: 70 },
@@ -21,30 +30,77 @@
 		{ size: 'small', x: 20, y: 88 },
 		{ size: 'small', x: 12, y: 68 }
 	];
+	let circles: Circle[] = [
+		{ size: 'medium', x: 6, y: 28 },
+		{ size: 'small', x: 45, y: 18 }
+	];
+	let halfCircles: HalfCircle[] = [
+		{ size: 'medium', x: 25, y: 70, rotation: 80 },
+		{ size: 'small', x: 80, y: 80, rotation: 0 }
+	];
 </script>
 
-<div>
+<div class="dots">
 	{#each dots as dot, i}
 		<span class={dot.size} style="margin: {dot.y}vh 0 0 {dot.x}%" />
 	{/each}
 </div>
+<div class="circles">
+	{#each circles as circle, i}
+		<span class={circle.size} style="margin: {circle.y}vh 0 0 {circle.x}%" />
+	{/each}
+</div>
+<div class="halfCircles">
+	{#each halfCircles as halfCircle, i}
+		<span
+			class={halfCircle.size}
+			style="margin: {halfCircle.y}vh 0 0 {halfCircle.x}%; transform: rotate({halfCircle.rotation}deg)"
+		/>
+	{/each}
+</div>
 
 <style>
-	.small {
+	.dots * {
+		background-color: #fff;
+	}
+	.dots .small {
 		padding: 0.3vh 0.3vh 0 0;
 	}
-	.medium {
+	.dots .medium {
 		padding: 0.6vh 0.6vh 0 0;
 	}
-	.large {
+	.dots .large {
 		padding: 0.9vh 0.9vh 0 0;
 	}
+
+	.circles .small {
+		border: 0.6em solid #06cb79;
+		width: 3em;
+		height: 3em;
+	}
+	.circles .medium {
+		border: 0.8em solid #06cb79;
+		width: 4em;
+		height: 4em;
+	}
+
+	.halfCircles * {
+		background-image: url('$lib/assets/images/halfCircle.svg');
+	}
+	.halfCircles .small {
+		width: 3em;
+		height: 3em;
+	}
+	.halfCircles .medium {
+		width: 4em;
+		height: 4em;
+	}
+
 	.small,
 	.medium,
 	.large {
 		position: fixed;
 		z-index: -1;
 		border-radius: 50%;
-		background-color: #fff;
 	}
 </style>
