@@ -1,5 +1,15 @@
-<div class="world" />
-<div class="moon" />
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
+
+	let loaded = false;
+	onMount(() => (loaded = true));
+</script>
+
+{#if loaded}
+	<div class="world" in:fade={{ delay: 2500 }} />
+	<div class="moon" in:fade={{ delay: 2650 }} />
+{/if}
 
 <style>
 	.world,
