@@ -53,11 +53,13 @@
 {/if}
 <!-- </div> -->
 <section class="right">
-	<h3 class="aboutText">
-		<span>Programming</span> is, apart from <span>skiing</span>, the greatest thing there is.
-		Besides programming, you can find me <span>rowing</span> on the Amstel River or giving
-		<span>sailinstuction</span> in Loosdrecht.
-	</h3>
+	{#if y > h / 2}
+		<h3 class="aboutText" transition:fade={{ duration: 100 }}>
+			<span>Programming</span> is, apart from <span>skiing</span>, the greatest thing there is.
+			Besides programming, you can find me <span>rowing</span> on the Amstel River or giving
+			<span>sailinstuction</span> in Loosdrecht.
+		</h3>
+	{/if}
 </section>
 
 <style>
@@ -73,5 +75,6 @@
 	}
 	h3.aboutText {
 		padding: 20%;
+		padding-top: 0;
 	}
 </style>

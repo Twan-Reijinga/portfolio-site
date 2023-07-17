@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount, afterUpdate } from 'svelte';
+	import { onMount } from 'svelte';
 	import { fly, fade } from 'svelte/transition';
 	import './textStyles.css';
 	export let title: string;
@@ -20,7 +20,6 @@
 			}, transitionTime * 1.1);
 		}
 	});
-	afterUpdate(() => {});
 </script>
 
 <svelte:window bind:scrollY={y} />
