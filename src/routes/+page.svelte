@@ -34,7 +34,7 @@
 			<TitleSubtitle
 				title="Hello World!"
 				subtitle="I'm Twan"
-				comment="// 17 year old web-, app- and AI-programmer"
+				comment="// 17 year old programmer"
 				{fontSize}
 				maxY={h / 2}
 			/>
