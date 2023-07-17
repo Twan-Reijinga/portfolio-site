@@ -7,16 +7,18 @@
 	import TitleSubtitle from './TitleSubtitles.svelte';
 	import ScrollText from './ScrollText.svelte';
 
+	let loadTitleSubtitles = false;
 	let y = 0;
 	let h = 0;
-	let loaded = false;
 	let fontSize: number;
 	onMount(() => {
-		loaded = true;
 		window.addEventListener('resize', () => {
 			fontSize = updateFontSize();
 		});
 	});
+	setTimeout(() => {
+		loadTitleSubtitles = true;
+	}, 2400);
 
 	afterUpdate(() => {
 		fontSize = updateFontSize();
@@ -25,31 +27,38 @@
 
 <svelte:window bind:scrollY={y} bind:innerHeight={h} />
 <SpaceBackground />
-{#if loaded}
-	<section class="centered" in:fade={{ delay: 2400, duration: 1000 }}>
-		{#if y < h / 2}
+<section class="centered">
+	{#if loadTitleSubtitles}
+		<div class="centered" in:fade={{ duration: 1000 }}>
 			<TitleSubtitle
 				title="Hello World!"
 				subtitle="I'm Twan"
 				comment="// 17 year old web-, app- and AI-programmer"
 				{fontSize}
+				maxY={h / 2}
 			/>
-		{:else if y < (h * 3) / 2}
-			<TitleSubtitle title="AboutMe()" subtitle="I'm Twan" comment="// Amsterdam" {fontSize} />
-		{/if}
-		{#if y < 100}
-			<ScrollText {fontSize} opacity={100 / y} />
-		{/if}
-		<!-- </div> -->
-	</section>
-	<section class="right">
-		<h3>
-			<span>Programming</span> is, apart from <span>skiing</span>, the greatest thing there is.
-			Besides programming, you can find me <span>rowing</span> on the Amstel River or giving
-			<span>sailinstuction</span> in Loosdrecht.
-		</h3>
-	</section>
+			<TitleSubtitle
+				title="AboutMe()"
+				subtitle="I'm Twan"
+				comment="// Amsterdam"
+				{fontSize}
+				minY={h / 2}
+				maxY={(h * 3) / 2}
+			/>
+		</div>
+	{/if}
+</section>
+{#if y < 100}
+	<ScrollText {fontSize} opacity={100 / y} />
 {/if}
+<!-- </div> -->
+<section class="right">
+	<h3 class="aboutText">
+		<span>Programming</span> is, apart from <span>skiing</span>, the greatest thing there is.
+		Besides programming, you can find me <span>rowing</span> on the Amstel River or giving
+		<span>sailinstuction</span> in Loosdrecht.
+	</h3>
+</section>
 
 <style>
 	.centered {
@@ -61,5 +70,8 @@
 	.right {
 		margin-left: 50%;
 		/* background-color: #ffffff05; */
+	}
+	h3.aboutText {
+		padding: 20%;
 	}
 </style>
