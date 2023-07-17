@@ -3,37 +3,82 @@
 	import { fade } from 'svelte/transition';
 
 	let y: number;
+	let w: number;
 	let h: number;
-	let worldSize = 25;
-	let worldPos = 50;
+	let worldSize = 3;
+	let worldPos = 35;
 	let moonSize = 3;
 	let moonPos = 35;
 	let loaded = false;
 	onMount(() => (loaded = true));
 	afterUpdate(() => {
-		console.log(y);
-		worldSize = 25 + (y * y) / (h * 3);
-		worldPos = 50 + (y * y) / (h * 3);
-		moonSize = 3 + (y * y) / (h * 20);
-		moonPos = (y * y) / (h * 10);
+		console.log(y / h);
+		({ size: worldSize, pos: worldPos } = calculateAnimation(y / h + 0.75));
+		({ size: moonSize, pos: moonPos } = calculateAnimation(y / h));
+		// worldSize = 25 + (y * y) / (h * 3);
+		// worldPos = (y * y) / (h * 3);
+		// ({
+		// 	size: worldSize,
+		// 	x: worldX,
+		// 	y: worldY
+		// } = calculateAnimation(y / h, w, h, w * 0.55, h * 0.3, 5, 1000, 0.5));
+		// ({
+		// 	size: moonSize,
+		// 	x: moonX,
+		// 	y: moonY
+		// } = calculateAnimation(y / h, w, h, w * 0.55, h * 0.3, 5, 1000, 0.5));
 	});
+
+	function calculateAnimation(t: number) {
+		let size = 2 * Math.pow(30, t);
+		let pos = Math.pow(t * 2, 8) * 0.5;
+		return { size, pos };
+	}
+
+	// function calculateAnimation(
+	// 	t: number,
+	// 	w: number,
+	// 	h: number,
+	// 	x: number,
+	// 	y: number,
+	// 	size: number,
+	// 	scale: number,
+	// 	speed: number
+	// ) {
+	// 	// Adjust the object's size based on its distance from the viewer
+	// 	let objectSize = size * Math.pow(scale, t);
+
+	// 	// Adjust the object's position to make it appear like it's moving towards the bottom right
+	// 	let objectDistance = t * Math.sqrt((w - x) ** 2 + (h - y) ** 2); // Non-linear distance transformation
+	// 	// let objectX = x + speed * 2 * objectDistance * Math.cos((t * Math.PI) / 4); // Non-linear x-position transformation
+	// 	// let objectY = y + speed * objectDistance * Math.sin((t * Math.PI) / 4); // Non-linear y-position transformation
+	// 	let objectX = x - objectSize + (objectDistance * (w - x)) / 2000 + speed * t * (w - x); // Non-linear x-position transformation
+	// 	let objectY = y - objectSize + (objectDistance * (h - y)) / 2000 + speed * t * (h - y);
+
+	// 	return {
+	// 		size: objectSize,
+	// 		x: objectX,
+	// 		y: objectY
+	// 	};
+	// }
+
+	// 2500
+	//2650
 </script>
 
-<svelte:window bind:scrollY={y} bind:innerHeight={h} />
+<svelte:window bind:scrollY={y} bind:innerWidth={w} bind:innerHeight={h} />
 {#if loaded}
 	<div
 		class="world"
 		style="width: {worldSize}%; height: {worldSize}%; 
-		       margin: {worldPos}vh 0 0 {15 + worldPos}%;
-			   display: {y > h ? 'none' : 'block'}"
-		in:fade={{ delay: 2500 }}
+		       margin: {35 + worldPos}vh 0 0 {55 + worldPos}%;"
+		in:fade={{ delay: 0 }}
 	/>
 	<div
 		class="moon"
 		style="width: {moonSize}%; height: {moonSize}%; 
-		       margin: {35 + moonPos}vh 0 0 {55 + moonPos / 2}%;
-			   display: {y > h ? 'none' : 'block'}"
-		in:fade={{ delay: 2650 }}
+		       margin: {35 + moonPos}vh 0 0 {55 + moonPos}%;"
+		in:fade={{ delay: 0 }}
 	/>
 {/if}
 

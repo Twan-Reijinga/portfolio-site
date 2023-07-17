@@ -6,6 +6,7 @@
 	import SpaceBackground from './SpaceBackground.svelte';
 	import TitleSubtitle from './TitleSubtitles.svelte';
 	import ScrollText from './ScrollText.svelte';
+	import About from './About.svelte';
 
 	let loadTitleSubtitles = false;
 	let y = 0;
@@ -52,15 +53,12 @@
 	<ScrollText {fontSize} opacity={100 / y} />
 {/if}
 <!-- </div> -->
-<section class="right">
-	{#if y > h / 2}
-		<h3 class="aboutText" transition:fade={{ duration: 100 }}>
-			<span>Programming</span> is, apart from <span>skiing</span>, the greatest thing there is.
-			Besides programming, you can find me <span>rowing</span> on the Amstel River or giving
-			<span>sailinstuction</span> in Loosdrecht.
-		</h3>
+<section class="right centered">
+	{#if y > h / 1.6}
+		<About {fontSize} />
 	{/if}
 </section>
+<section class="right centered" />
 
 <style>
 	.centered {
@@ -72,9 +70,5 @@
 	.right {
 		margin-left: 50%;
 		/* background-color: #ffffff05; */
-	}
-	h3.aboutText {
-		padding: 20%;
-		padding-top: 0;
 	}
 </style>
