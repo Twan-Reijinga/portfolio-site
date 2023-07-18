@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { slide, fade } from 'svelte/transition';
 	import xSvg from '$lib/assets/images/x.svg';
 	import GithubButton from './GithubButton.svelte';
 	export let title: string;
@@ -6,19 +7,41 @@
 	export let fakeFileName = '';
 	export let activated: boolean;
 	export let cardType: 'small' | 'full';
+	let cardState: 'minimized' | 'maximized' = 'maximized';
 	export let clientHeight = 0;
+
+	interface Params {
+		duration: number;
+	}
+	function increaseHeight(node: any, { duration }: Params) {
+		return {
+			duration,
+			css: (t: number) => {
+				return `height: ${t}`;
+			}
+		};
+	}
+	function toggleCardState() {
+		if (cardState == 'minimized') {
+			cardState = 'maximized';
+		} else if (cardState == 'maximized') {
+			cardState = 'minimized';
+		}
+	}
 </script>
 
 <div class="card">
 	<div class="dot" class:activated />
 	<div class="line" />
 	<article bind:clientHeight>
-		{#if cardType === 'full'}
-			<div class="header">
-				<img class="x" src={xSvg} alt="x" />
+		{#if cardType == 'full' && cardState == 'maximized'}
+			<div class="header" transition:slide>
+				<a on:click={() => toggleCardState()}>
+					<img class="x" src={xSvg} alt="x" />
+				</a>
 				<h3>{title}</h3>
 			</div>
-			<div class="main">
+			<div class="main" transition:slide>
 				<h5 class="command">
 					[twan@arch]$ head {fakeFileName}.md
 				</h5>
@@ -28,8 +51,13 @@
 					<GithubButton url="https://github.com/Twan-Reijinga" />
 				</div>
 			</div>
-		{:else if cardType === 'small'}
-			<div class="header noBorder">
+		{:else if cardType == 'small' || cardState == 'minimized'}
+			<div
+				class="header minimized"
+				on:click={() => toggleCardState()}
+				in:slide
+				out:fade={{ duration: 50 }}
+			>
 				<h4 class="date">// 01 jan 1960</h4>
 				<h3>{title}</h3>
 			</div>
@@ -79,9 +107,13 @@
 		padding: 0.25vh 1%;
 		border-bottom: 2px solid #fff;
 	}
-	.noBorder {
+	.minimized {
 		border: none;
 	}
+	.minimized h3 {
+		text-align: right;
+	}
+
 	.main {
 		padding: 5%;
 	}
@@ -91,6 +123,7 @@
 	}
 	h3 {
 		text-align: center;
+		white-space: nowrap;
 		width: 100%;
 	}
 	.out {
