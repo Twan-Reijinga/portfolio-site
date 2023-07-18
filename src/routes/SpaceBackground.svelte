@@ -96,26 +96,26 @@
 	}
 
 	.circles .small {
-		border: 0.6em solid #06cb79;
-		width: 3em;
-		height: 3em;
+		border: 1vh solid #06cb79;
+		width: 5vh;
+		height: 5vh;
 	}
 	.circles .medium {
-		border: 0.8em solid #06cb79;
-		width: 4em;
-		height: 4em;
+		border: 1.3vh solid #06cb79;
+		width: 7vh;
+		height: 7vh;
 	}
 
 	.halfCircles * {
 		background-image: url('$lib/assets/images/halfCircle.svg');
 	}
 	.halfCircles .small {
-		width: 3em;
-		height: 3em;
+		width: 5vh;
+		height: 5vh;
 	}
 	.halfCircles .medium {
-		width: 4em;
-		height: 4em;
+		width: 7vh;
+		height: 7vh;
 	}
 
 	.small,

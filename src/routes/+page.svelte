@@ -27,6 +27,10 @@
 	});
 </script>
 
+<!-- <svelte:head>
+	<title>Twan Reijinga | Portfolio</title>
+</svelte:head> -->
+
 <svelte:window bind:scrollY={y} bind:innerHeight={h} />
 <SpaceBackground />
 <section class="left centered">
@@ -35,7 +39,7 @@
 			<TitleSubtitle
 				title="Hello World!"
 				subtitle="I'm Twan"
-				comment="// 17 year old programmer"
+				comment="// 17 year old programming enthusiast"
 				{fontSize}
 				maxY={h / 2}
 			/>
@@ -45,14 +49,14 @@
 				comment="// Amsterdam"
 				{fontSize}
 				minY={h / 2}
-				maxY={(h * 3) / 2}
+				maxY={(h * 2.5) / 2}
 			/>
 			<TitleSubtitle
 				title="Timeline()"
 				subtitle="[ProjectName]"
 				comment="// Optional Information"
 				{fontSize}
-				minY={(h * 3) / 2}
+				minY={(h * 2.5) / 2}
 				maxY={(h * 5) / 2}
 			/>
 		</div>
@@ -61,14 +65,18 @@
 {#if y < 100}
 	<ScrollText {fontSize} opacity={100 / y} />
 {/if}
-<section class="right about">
+<section class="right">
 	{#if y > h / 1.6}
 		<About {fontSize} />
 	{/if}
 </section>
+
 <section class="right timeline">
-	<Timeline {fontSize} />
+	{#if y > h / 1.3}
+		<Timeline {fontSize} />
+	{/if}
 </section>
+<section style="height: 100vh" />
 
 <style>
 	.centered {
@@ -82,9 +90,6 @@
 	}
 	.right {
 		margin-left: 50%;
-	}
-	.about {
-		height: 75vh;
 	}
 	.timeline {
 		height: 100vh;
