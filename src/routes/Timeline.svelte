@@ -3,8 +3,11 @@
 	import TimelineCard from './TimelineCard.svelte';
 	import TimelineLine from './TimelineLine.svelte';
 	export let fontSize: number;
+	let y: number;
+	let h: number;
 </script>
 
+<svelte:window bind:scrollY={y} bind:innerHeight={h} />
 <div class="container">
 	<div class="projectsBox">
 		<Subject text="Projects & Expience" image="experience" fontSize={fontSize / 2.2} />
@@ -13,11 +16,17 @@
 				title="Slidify: Music slider"
 				discription="Aliquet nibh praesent tristique magna sit. Quisque sagittis purus sit amet volutpat consequat mauris nunc congue. Risus commodo viverra maecenas accumsan. Mattis nunc sed blandit libero volutpat sed cras ornare. Diam sit amet nisl suscipit adipiscing. Viverra nibh cras pulvinar mattis nunc sed blandit libero volutpat. Turpis massa tincidunt dui ut ornare. Ornare arcu odio ut sem nulla pharetra. Urna id volutpat lacus."
 				fakeFileName="Slidify"
-				fontSize={fontSize / 2.5}
+				activated={y > h * 1.35}
 			/>
+			<TimelineCard
+				title="Slidify: Music slider"
+				discription="Aliquet nibh praesent tristique magna sit. Quisque sagittis purus sit amet volutpat consequat mauris nunc congue. Risus commodo viverra maecenas accumsan. Mattis nunc sed blandit libero volutpat sed cras ornare. Diam sit amet nisl suscipit adipiscing. Viverra nibh cras pulvinar mattis nunc sed blandit libero volutpat. Turpis massa tincidunt dui ut ornare. Ornare arcu odio ut sem nulla pharetra. Urna id volutpat lacus."
+				fakeFileName="Slidify"
+				activated={y > h * 1.75}
+			/>
+			<!-- TODO: make activated system -->
 		</div>
 	</div>
-	<!-- <div class="line" style="margin-top: {fontSize * (15 / 44)}px" /> -->
 	<TimelineLine fontSize={fontSize * (15 / 44)} />
 </div>
 
@@ -32,7 +41,7 @@
 	}
 	.cards {
 		display: flex;
-		flex-direction: row-reverse;
-		margin-top: 3vh;
+		flex-direction: column;
+		margin-top: 2vh;
 	}
 </style>

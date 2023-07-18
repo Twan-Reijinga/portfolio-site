@@ -22,11 +22,11 @@
 	}
 	.line {
 		position: relative;
-		width: 10%;
-		min-width: 2px;
+		/* width: 10%; */
+		width: 2px;
 		height: 100vh;
 		background-color: #fff;
-		margin: 0 45%;
+		margin: 0 calc(50% - 1px);
 	}
 	.circle {
 		border: 0.5vh solid #06cb79;

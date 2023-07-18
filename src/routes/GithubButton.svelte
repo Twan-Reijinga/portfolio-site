@@ -13,6 +13,7 @@
 	.buttonBox {
 		cursor: pointer;
 		text-decoration: none;
+		transition: all 0.2s;
 	}
 	.button {
 		transform: skew(-30deg);
@@ -22,6 +23,7 @@
 		background-color: #ffffff00;
 		z-index: 1;
 		transform-style: preserve-3d;
+		transition: all 0.2s;
 	}
 	.shadow {
 		width: 100%;
@@ -31,13 +33,19 @@
 		background-color: #06cb79;
 		transform: skew(-30deg);
 		z-index: -1;
+		transition: all 0.2s;
+	}
+
+	.buttonBox:hover {
+		margin: 4px -10px -4px 10px;
 	}
 	.buttonBox:hover .shadow {
+		transform: skew(-30deg);
 		margin: 0;
 	}
 	.buttonBox:hover .button {
 		margin-top: -34px;
-		border-color: #06cb79;
+		/* border-color: #06cb79; */
 	}
 
 	h4 {
