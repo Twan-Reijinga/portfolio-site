@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	export let text: string;
-	export let image: 'programming';
+	export let image: 'programming' | 'experience';
 	export let fontSize: number;
 	let y: number;
 	let h: number;
@@ -13,9 +13,9 @@
 		<div
 			class="imageHolder"
 			style="width: {fontSize * 1.5}px; height: {fontSize * 1.5}px; 
-               box-shadow: {fontSize / 4}px {-fontSize / 4}px #000000AA;"
+               box-shadow: {fontSize / 4}px {-fontSize / 4}px #00000099;"
 		>
-			<div class={image} />
+			<div class="image {image}" />
 		</div>
 		<h3 style="font-size: {fontSize}px;">{text}</h3>
 	</div>
@@ -25,7 +25,7 @@
 	.horizontal {
 		display: flex;
 		justify-content: right;
-		padding-top: 5vh;
+		/* padding-top: 5vh; */
 	}
 	.imageHolder {
 		background-image: var(--image);
@@ -37,12 +37,19 @@
 		padding-left: 5%;
 		line-height: 1.5;
 	}
-	.programming {
+	.image {
+		background-position: center center;
 		width: 100%;
 		height: 100%;
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-image: url('$lib/assets/images/programming.png');
 		transform: rotate(-45deg);
+	}
+	.programming {
+		background-image: url('$lib/assets/images/programming.png');
+	}
+	.experience {
+		background-size: 70%;
+		background-image: url('$lib/assets/images/experience.png');
 	}
 </style>

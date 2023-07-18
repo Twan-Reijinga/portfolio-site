@@ -23,7 +23,7 @@
 </script>
 
 <svelte:window bind:scrollY={y} />
-{#if loaded && y >= minY && y <= maxY}
+{#if loaded && y >= minY && y < maxY}
 	<div class="fixedBox">
 		<div class="titleBox" in:fade={{ delay: isFirstLoad ? 0 : transitionTime * 0.9, duration: 0 }}>
 			<h1

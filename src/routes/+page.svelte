@@ -7,6 +7,7 @@
 	import TitleSubtitle from './TitleSubtitles.svelte';
 	import ScrollText from './ScrollText.svelte';
 	import About from './About.svelte';
+	import Timeline from './Timeline.svelte';
 
 	let loadTitleSubtitles = false;
 	let y = 0;
@@ -28,7 +29,7 @@
 
 <svelte:window bind:scrollY={y} bind:innerHeight={h} />
 <SpaceBackground />
-<section class="centered">
+<section class="left centered">
 	{#if loadTitleSubtitles}
 		<div class="centered" in:fade={{ duration: 1000 }}>
 			<TitleSubtitle
@@ -46,19 +47,28 @@
 				minY={h / 2}
 				maxY={(h * 3) / 2}
 			/>
+			<TitleSubtitle
+				title="Timeline()"
+				subtitle="[ProjectName]"
+				comment="// Optional Information"
+				{fontSize}
+				minY={(h * 3) / 2}
+				maxY={(h * 5) / 2}
+			/>
 		</div>
 	{/if}
 </section>
 {#if y < 100}
 	<ScrollText {fontSize} opacity={100 / y} />
 {/if}
-<!-- </div> -->
-<section class="right centered">
+<section class="right about">
 	{#if y > h / 1.6}
 		<About {fontSize} />
 	{/if}
 </section>
-<section class="right centered" />
+<section class="right timeline">
+	<Timeline {fontSize} />
+</section>
 
 <style>
 	.centered {
@@ -67,8 +77,16 @@
 		justify-content: center;
 		align-items: center;
 	}
+	.left {
+		height: 100vh;
+	}
 	.right {
 		margin-left: 50%;
-		/* background-color: #ffffff05; */
+	}
+	.about {
+		height: 75vh;
+	}
+	.timeline {
+		height: 100vh;
 	}
 </style>

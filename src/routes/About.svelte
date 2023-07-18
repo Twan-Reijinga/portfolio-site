@@ -50,10 +50,8 @@
 
 <style>
 	.aboutBox {
-		width: 50%;
 		padding: 5%;
-		position: absolute;
-		top: 100vh;
+		top: 0;
 	}
 	.aboutBox h3 {
 		top: 0;
@@ -64,5 +62,8 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: right;
+	}
+	h3 {
+		padding-bottom: 5vh;
 	}
 </style>
