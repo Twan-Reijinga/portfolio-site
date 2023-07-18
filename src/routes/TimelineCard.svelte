@@ -2,9 +2,10 @@
 	import xSvg from '$lib/assets/images/x.svg';
 	import GithubButton from './GithubButton.svelte';
 	export let title: string;
-	export let discription: string;
-	export let fakeFileName: string;
+	export let discription = '';
+	export let fakeFileName = '';
 	export let activated: boolean;
+	export let cardType: 'small' | 'full';
 	export let clientHeight = 0;
 </script>
 
@@ -12,20 +13,27 @@
 	<div class="dot" class:activated />
 	<div class="line" />
 	<article bind:clientHeight>
-		<div class="header">
-			<img class="x" src={xSvg} alt="x" />
-			<h3>{title}</h3>
-		</div>
-		<div class="main">
-			<h5 class="command">
-				[twan@arch]$ head {fakeFileName}.md
-			</h5>
-			<h5 class="out">{discription}</h5>
-			<div class="footer">
-				<h4 class="date">// 01 jan 1960</h4>
-				<GithubButton url="https://github.com/Twan-Reijinga" />
+		{#if cardType === 'full'}
+			<div class="header">
+				<img class="x" src={xSvg} alt="x" />
+				<h3>{title}</h3>
 			</div>
-		</div>
+			<div class="main">
+				<h5 class="command">
+					[twan@arch]$ head {fakeFileName}.md
+				</h5>
+				<h5 class="out">{discription}</h5>
+				<div class="footer">
+					<h4 class="date">// 01 jan 1960</h4>
+					<GithubButton url="https://github.com/Twan-Reijinga" />
+				</div>
+			</div>
+		{:else if cardType === 'small'}
+			<div class="header noBorder">
+				<h4 class="date">// 01 jan 1960</h4>
+				<h3>{title}</h3>
+			</div>
+		{/if}
 	</article>
 </div>
 
@@ -71,10 +79,14 @@
 		padding: 0.25vh 1%;
 		border-bottom: 2px solid #fff;
 	}
+	.noBorder {
+		border: none;
+	}
 	.main {
 		padding: 5%;
 	}
-	img {
+	.x {
+		height: 20px;
 		filter: invert(100%);
 	}
 	h3 {
