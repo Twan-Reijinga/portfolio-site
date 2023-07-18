@@ -1,16 +1,19 @@
 <script lang="ts">
 	export let fontSize: number;
+	export let height: number;
+	export let minH: number;
+	export let maxH: number;
 	let y: number;
 	let h: number;
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerHeight={h} />
 <div class="center">
-	{#if y > h * 1.25 && y < h * 2.5}
+	{#if y > minH && y < maxH}
 		<span class="dot" style="margin-top: {fontSize - h * 0.0075 + y - h * 1.25}px" />
 	{/if}
 	<span class="circle" style="margin-top: {fontSize - h * 0.0125}px" />
-	<div class="line" />
+	<div class="line" style="height: {height}px" />
 	<span class="circle" />
 </div>
 
@@ -24,7 +27,6 @@
 		position: relative;
 		/* width: 10%; */
 		width: 2px;
-		height: 100vh;
 		background-color: #fff;
 		margin: 0 calc(50% - 1px);
 	}

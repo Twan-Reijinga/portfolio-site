@@ -1,16 +1,17 @@
 <script lang="ts">
+	import xSvg from '$lib/assets/images/x.svg';
+	import GithubButton from './GithubButton.svelte';
 	export let title: string;
 	export let discription: string;
 	export let fakeFileName: string;
 	export let activated: boolean;
-	import xSvg from '$lib/assets/images/x.svg';
-	import GithubButton from './GithubButton.svelte';
+	export let clientHeight = 0;
 </script>
 
 <div class="card">
 	<div class="dot" class:activated />
 	<div class="line" />
-	<article>
+	<article bind:clientHeight>
 		<div class="header">
 			<img class="x" src={xSvg} alt="x" />
 			<h3>{title}</h3>
@@ -35,7 +36,7 @@
 	}
 	article {
 		width: 100%;
-		max-width: 500px;
+		max-width: 750px;
 		background-color: #121e28;
 		border: 2px solid #fff;
 		margin-top: 1vh;

@@ -27,9 +27,9 @@
 	});
 </script>
 
-<!-- <svelte:head>
+<svelte:head>
 	<title>Twan Reijinga | Portfolio</title>
-</svelte:head> -->
+</svelte:head>
 
 <svelte:window bind:scrollY={y} bind:innerHeight={h} />
 <SpaceBackground />
@@ -73,7 +73,7 @@
 
 <section class="right timeline">
 	{#if y > h / 1.3}
-		<Timeline {fontSize} />
+		<Timeline {fontSize} minH={h * 1.25} />
 	{/if}
 </section>
 <section style="height: 100vh" />
