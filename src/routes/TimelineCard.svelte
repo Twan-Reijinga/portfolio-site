@@ -4,6 +4,7 @@
 	export let fakeFileName: string;
 	export let fontSize: number;
 	import xSvg from '$lib/assets/images/x.svg';
+	import GithubButton from './GithubButton.svelte';
 </script>
 
 <article>
@@ -19,6 +20,7 @@
 		<h5 class="out">{discription}</h5>
 		<div class="footer">
 			<h4 class="date">// 01 jan 1960</h4>
+			<GithubButton url="https://github.com/Twan-Reijinga" />
 		</div>
 	</div>
 </article>
@@ -53,6 +55,14 @@
 		color: #06cb79;
 	}
 	.footer {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		width: 100%;
+		align-items: center;
 		padding-top: 20px;
+	}
+	.date {
+		white-space: nowrap;
 	}
 </style>
