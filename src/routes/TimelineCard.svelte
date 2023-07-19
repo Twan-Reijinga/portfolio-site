@@ -5,6 +5,7 @@
 	export let title: string;
 	export let discription = '';
 	export let fakeFileName = '';
+	export let img = '';
 	export let activated: boolean;
 	export let cardType: 'small' | 'full';
 	let cardState: 'minimized' | 'maximized' = 'maximized';
@@ -45,7 +46,12 @@
 				<h5 class="command">
 					[twan@arch]$ head {fakeFileName}.md
 				</h5>
-				<h5 class="out">{discription}</h5>
+				<div class="horizontal">
+					<h5 class="out" style="width: {img !== '' ? 50 : 100}%">{discription}</h5>
+					{#if img !== ''}
+						<div class="projectImg" style="background-image: url({img})" />
+					{/if}
+				</div>
 				<div class="footer">
 					<h4 class="date">// 01 jan 1960</h4>
 					<GithubButton url="https://github.com/Twan-Reijinga" />
@@ -78,6 +84,18 @@
 		margin-top: 1vh;
 		padding: 0.5vh 2.5%;
 	}
+	.horizontal {
+		display: flex;
+		justify-content: center;
+		margin-top: 15px;
+	}
+	.projectImg {
+		width: 50%;
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-left: 20px;
+	}
+
 	.line {
 		position: absolute;
 		margin-top: calc(1.5vh + 15px);
@@ -124,11 +142,11 @@
 	h3 {
 		text-align: center;
 		white-space: nowrap;
-		width: 100%;
+		/* width: 100%; */
 	}
 	.out {
-		margin-top: 15px;
 		color: #06cb79;
+		min-width: 200px;
 	}
 	.footer {
 		display: flex;
