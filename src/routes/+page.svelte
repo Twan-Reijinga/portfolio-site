@@ -4,11 +4,13 @@
 	import { updateFontSize } from '../util';
 	import './global.css';
 	import projects from '../data/projects';
+	// import languages from '../data/languages';
 	import SpaceBackground from './SpaceBackground.svelte';
 	import TitleSubtitle from './TitleSubtitles.svelte';
 	import ScrollText from './ScrollText.svelte';
 	import About from './About.svelte';
 	import Timeline from './Timeline.svelte';
+	// import Language from './Language.svelte';
 
 	let loadTitleSubtitles = false;
 	let y = 0;
@@ -62,6 +64,16 @@
 				minY={(h * 2.5) / 2}
 				maxY={(h * 5) / 2}
 			/>
+			<!-- <div class="projLangs">
+				{#each languages as language}
+					<Language
+						text={language.text}
+						color={language.color}
+						textColor={language.textColor}
+						fontSize={fontSize / 3}
+					/>
+				{/each}
+			</div> -->
 		</div>
 	{/if}
 </section>
@@ -97,4 +109,12 @@
 	.timeline {
 		height: 100vh;
 	}
+	/* .projLangs {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		background-color: #fff;
+		width: 100%;
+		margin-top: 50%;
+	} */
 </style>
