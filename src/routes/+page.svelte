@@ -4,19 +4,19 @@
 	import { updateFontSize } from '../util';
 	import './global.css';
 	import projects from '../data/projects';
-	// import languages from '../data/languages';
+	import languages from '../data/languages';
 	import SpaceBackground from './SpaceBackground.svelte';
 	import TitleSubtitle from './TitleSubtitles.svelte';
 	import ScrollText from './ScrollText.svelte';
 	import About from './About.svelte';
 	import Timeline from './Timeline.svelte';
-	// import Language from './Language.svelte';
+	import Language from './Language.svelte';
 
 	let loadTitleSubtitles = false;
 	let y = 0;
 	let h = 0;
+	let projectIndex = 0;
 	let fontSize: number;
-	let projectIndex: number;
 
 	onMount(() => {
 		window.addEventListener('resize', () => {
@@ -30,6 +30,17 @@
 	afterUpdate(() => {
 		fontSize = updateFontSize();
 	});
+
+	function getLanguageInfo(language: string) {
+		let languageInfo;
+		languages.forEach((lang) => {
+			if (lang.text === language) {
+				languageInfo = lang;
+				return;
+			}
+		});
+		return languageInfo;
+	}
 </script>
 
 <svelte:head>
@@ -64,16 +75,18 @@
 				minY={(h * 2.5) / 2}
 				maxY={(h * 5) / 2}
 			/>
-			<!-- <div class="projLangs">
-				{#each languages as language}
-					<Language
-						text={language.text}
-						color={language.color}
-						textColor={language.textColor}
-						fontSize={fontSize / 3}
-					/>
-				{/each}
-			</div> -->
+			<div class="projLangs">
+				{#if projects[projectIndex].languages}
+					{#each projects[projectIndex].languages as language}
+						<Language
+							text={language}
+							color={getLanguageInfo(language).color}
+							textColor={getLanguageInfo(language).textColor}
+							fontSize={fontSize / 3}
+						/>
+					{/each}
+				{/if}
+			</div>
 		</div>
 	{/if}
 </section>
@@ -109,12 +122,13 @@
 	.timeline {
 		height: 100vh;
 	}
-	/* .projLangs {
+	.projLangs {
+		position: fixed;
 		display: flex;
 		justify-content: center;
+		/* align-items: start; */
 		flex-wrap: wrap;
-		background-color: #fff;
-		width: 100%;
-		margin-top: 50%;
-	} */
+		width: 40%;
+		margin-top: 25%;
+	}
 </style>
