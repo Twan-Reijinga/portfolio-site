@@ -11,6 +11,7 @@
 	let h: number;
 	let clientHeight: number;
 	let clientHeights: number[] = Array(3);
+	let lastScrolledItem = 0;
 
 	afterUpdate(() => {
 		clientHeight = h * 0.03;
@@ -18,7 +19,32 @@
 			clientHeight += x + h * 0.01;
 		});
 		maxH = minH + clientHeight;
+		lastScrolledItem = getLastScrolledItem(y);
 	});
+
+	function getScrollDistanceToDot(item: number) {
+		let distance = minH + h * 0.045 + 30;
+		for (let i = 0; i < item; i++) {
+			distance += clientHeights[i] + h * 0.01 + 4;
+		}
+		return distance;
+	}
+	function getLastScrolledItem(y: number) {
+		let distance = y - (minH + h * 0.045 + 30);
+		let lastIndex = 0;
+
+		for (let i = 0; i < clientHeights.length; i++) {
+			const itemScrollHeight = i ? clientHeights[i - 1] + h * 0.01 + 4 : 0;
+
+			if (distance >= itemScrollHeight) {
+				distance -= itemScrollHeight;
+				lastIndex = i;
+			} else {
+				break;
+			}
+		}
+		return lastIndex;
+	}
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerHeight={h} />
@@ -35,7 +61,7 @@
 					fakeFileName={project.fakeFileName}
 					img={project.img}
 					cardType={project.cardType}
-					activated={y > minH + h * 0.045 + 30}
+					activated={y > getScrollDistanceToDot(i)}
 				/>
 			{/each}
 		</div>
