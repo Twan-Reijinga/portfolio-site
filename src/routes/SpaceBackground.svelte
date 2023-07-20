@@ -48,16 +48,15 @@
 
 {#if loaded}
 	<div class="dots">
-		{#each dots as dot, i}
+		{#each dots as dot}
 			<span
 				class={dot.size}
-				id={'dot' + i}
 				style="margin: {dot.y}vh 0 0 {dot.x}%; animation-duration: {dot.duration}s"
 			/>
 		{/each}
 	</div>
 	<div class="circles">
-		{#each circles as circle, i}
+		{#each circles as circle}
 			<span
 				class={circle.size}
 				style="margin: {circle.y}vh 0 0 {circle.x}%; animation-duration: {circle.duration}s"
@@ -65,7 +64,7 @@
 		{/each}
 	</div>
 	<div class="halfCircles">
-		{#each halfCircles as halfCircle, i}
+		{#each halfCircles as halfCircle}
 			<span
 				class={halfCircle.size}
 				style="margin: {halfCircle.y}vh 0 0 {halfCircle.x}%; transform: rotate({halfCircle.rotation}deg); animation-duration: {halfCircle.duration}s"

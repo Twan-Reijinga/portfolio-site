@@ -37,16 +37,14 @@
 	<article bind:clientHeight>
 		{#if cardType == 'full' && cardState == 'maximized'}
 			<div class="header" transition:slide>
-				<a on:click={() => toggleCardState()}>
-					<img class="x" src={xSvg} alt="x" />
-				</a>
+				<button class="x" on:click={() => toggleCardState()} />
 				<h3>{title}</h3>
 			</div>
 			<div class="main" transition:slide>
 				<h5 class="command">
 					[twan@arch]$ head {fakeFileName}.md
 				</h5>
-				<div class="horizontal">
+				<div class="grid">
 					<h5 class="out">{discription}</h5>
 					{#if img !== ''}
 						<div class="projectImg" style="background-image: url({img})" />
@@ -125,10 +123,14 @@
 		padding: 5%;
 	}
 	.x {
+		width: 20px;
 		height: 20px;
+		background-image: url('$lib/assets/images/x.svg');
+		background-position: center center;
+		background-size: contain;
 		filter: invert(100%);
 	}
-	.horizontal {
+	.grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		grid-gap: 30px;
