@@ -3,6 +3,7 @@
 	import { fade } from 'svelte/transition';
 	import { updateFontSize } from '../util';
 	import './global.css';
+	import projects from '../data/projects';
 	import SpaceBackground from './SpaceBackground.svelte';
 	import TitleSubtitle from './TitleSubtitles.svelte';
 	import ScrollText from './ScrollText.svelte';
@@ -13,6 +14,8 @@
 	let y = 0;
 	let h = 0;
 	let fontSize: number;
+	let projectIndex: number;
+
 	onMount(() => {
 		window.addEventListener('resize', () => {
 			fontSize = updateFontSize();
@@ -39,22 +42,22 @@
 			<TitleSubtitle
 				title="Hello World!"
 				subtitle="I'm Twan"
-				comment="// 17 year old programming enthusiast"
+				comment="17 year old programming enthusiast"
 				{fontSize}
 				maxY={h / 2}
 			/>
 			<TitleSubtitle
 				title="AboutMe()"
 				subtitle="I'm Twan"
-				comment="// Amsterdam"
+				comment="Amsterdam"
 				{fontSize}
 				minY={h / 2}
 				maxY={(h * 2.5) / 2}
 			/>
 			<TitleSubtitle
 				title="Timeline()"
-				subtitle="[ProjectName]"
-				comment="// Optional Information"
+				subtitle={projects[projectIndex].title}
+				comment={projects[projectIndex].comment}
 				{fontSize}
 				minY={(h * 2.5) / 2}
 				maxY={(h * 5) / 2}
@@ -73,7 +76,7 @@
 
 <section class="right timeline">
 	{#if y > h / 1.3}
-		<Timeline {fontSize} minH={h * 1.25} />
+		<Timeline {fontSize} minH={h * 1.25} bind:lastScrolledItem={projectIndex} />
 	{/if}
 </section>
 <section style="height: 100vh" />

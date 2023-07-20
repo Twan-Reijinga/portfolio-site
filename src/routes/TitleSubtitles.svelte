@@ -41,8 +41,11 @@
 		<h2 style="font-size: {fontSize}px" transition:fade={{ duration: transitionTime }}>
 			{subtitle}
 		</h2>
-		<h4 style="font-size: {fontSize / 3}px" transition:fade={{ duration: transitionTime }}>
-			{comment}
+		<h4
+			style="font-size: {fontSize / 3}px; opacity: {comment ? 1 : 0}"
+			transition:fade={{ duration: transitionTime }}
+		>
+			// {comment ? comment : ''}
 		</h4>
 	</div>
 {/if}

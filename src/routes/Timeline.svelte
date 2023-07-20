@@ -11,7 +11,7 @@
 	let h: number;
 	let clientHeight: number;
 	let clientHeights: number[] = Array(3);
-	let lastScrolledItem = 0;
+	export let lastScrolledItem = 0;
 
 	afterUpdate(() => {
 		clientHeight = h * 0.03;
