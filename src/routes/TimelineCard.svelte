@@ -47,9 +47,10 @@
 					[twan@arch]$ head {fakeFileName}.md
 				</h5>
 				<div class="horizontal">
-					<h5 class="out" style="width: {img !== '' ? 50 : 100}%">{discription}</h5>
+					<h5 class="out">{discription}</h5>
 					{#if img !== ''}
 						<div class="projectImg" style="background-image: url({img})" />
+						<!-- <img class="projectImg" src={img} alt="project" /> -->
 					{/if}
 				</div>
 				<div class="footer">
@@ -78,24 +79,12 @@
 	}
 	article {
 		width: 100%;
-		max-width: 750px;
+		max-width: 900px;
 		background-color: #121e28;
 		border: 2px solid #fff;
 		margin-top: 1vh;
 		padding: 0.5vh 2.5%;
 	}
-	.horizontal {
-		display: flex;
-		justify-content: center;
-		margin-top: 15px;
-	}
-	.projectImg {
-		width: 50%;
-		background-size: contain;
-		background-repeat: no-repeat;
-		margin-left: 20px;
-	}
-
 	.line {
 		position: absolute;
 		margin-top: calc(1.5vh + 15px);
@@ -139,14 +128,26 @@
 		height: 20px;
 		filter: invert(100%);
 	}
+	.horizontal {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-gap: 30px;
+		margin-top: 15px;
+	}
+	.projectImg {
+		min-width: 200px;
+		min-height: 250px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 100%;
+	}
 	h3 {
 		text-align: center;
-		white-space: nowrap;
-		/* width: 100%; */
+		width: 100%;
 	}
 	.out {
 		color: #06cb79;
-		min-width: 200px;
 	}
 	.footer {
 		display: flex;
