@@ -3,6 +3,7 @@
 	import xSvg from '$lib/assets/images/x.svg';
 	import GithubButton from './GithubButton.svelte';
 	export let title: string;
+	export let date: string;
 	export let discription = '';
 	export let fakeFileName = '';
 	export let img = '';
@@ -52,7 +53,7 @@
 					{/if}
 				</div>
 				<div class="footer">
-					<h4 class="date">// 01 jan 1960</h4>
+					<h4 class="date">// {date}</h4>
 					<GithubButton url="https://github.com/Twan-Reijinga" />
 				</div>
 			</div>
@@ -63,7 +64,7 @@
 				in:slide
 				out:fade={{ duration: 50 }}
 			>
-				<h4 class="date">// 01 jan 1960</h4>
+				<h4 class="date">// {date}</h4>
 				<h3>{title}</h3>
 			</div>
 		{/if}

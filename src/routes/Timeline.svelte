@@ -30,6 +30,7 @@
 				<TimelineCard
 					bind:clientHeight={clientHeights[i]}
 					title={project.title}
+					date={project.date}
 					discription={project.discription}
 					fakeFileName={project.fakeFileName}
 					img={project.img}
