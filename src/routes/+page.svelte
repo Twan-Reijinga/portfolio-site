@@ -102,10 +102,10 @@
 			<TitleSubtitle
 				title="ContactMe()"
 				subtitle="Twan@reijin"
+				subtitleAfterDot="ga"
 				comment={projects[projectIndex].comment}
 				{fontSize}
 				minY={(h * 2.5) / 2 + timelineHeight}
-				subtitleAfterDot="ga"
 			/>
 		</div>
 	{/if}
@@ -129,7 +129,9 @@
 		/>
 	{/if}
 </section>
-<section style="height: 100vh" />
+<section style="height: 100vh">
+	<!-- <Contact /> -->
+</section>
 
 <style>
 	.centered {
