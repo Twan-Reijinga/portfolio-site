@@ -6,12 +6,12 @@
 	import TimelineLine from './TimelineLine.svelte';
 	export let fontSize: number;
 	export let minH: number;
+	export let lastScrolledItem = 0;
+	export let clientHeight: number;
+	let clientHeights: number[] = Array(3);
 	let maxH: number;
 	let y: number;
 	let h: number;
-	let clientHeight: number;
-	let clientHeights: number[] = Array(3);
-	export let lastScrolledItem = 0;
 
 	afterUpdate(() => {
 		clientHeight = h * 0.03;

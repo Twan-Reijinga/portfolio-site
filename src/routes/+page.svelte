@@ -17,6 +17,7 @@
 	let h = 0;
 	let projectIndex = 0;
 	let fontSize: number;
+	let timelineHeight: number;
 
 	onMount(() => {
 		window.addEventListener('resize', () => {
@@ -84,10 +85,10 @@
 				comment={projects[projectIndex].comment}
 				{fontSize}
 				minY={(h * 2.5) / 2}
-				maxY={(h * 5) / 2}
+				maxY={(h * 2.5) / 2 + timelineHeight}
 			/>
-			<div class="projLangs" style="margin-top: {fontSize * 5}px">
-				{#if projects[projectIndex] && typeof projects[projectIndex].languages}
+			{#if y > (h * 2.5) / 2 && y < (h * 2.5) / 2 + timelineHeight && projects[projectIndex].languages}
+				<div class="projLangs" style="margin-top: {fontSize * 5}px">
 					{#each getLanguages(projects[projectIndex].languages) as language}
 						<Language
 							text={language.text}
@@ -96,8 +97,16 @@
 							fontSize={fontSize / 3}
 						/>
 					{/each}
-				{/if}
-			</div>
+				</div>
+			{/if}
+			<TitleSubtitle
+				title="ContactMe()"
+				subtitle="Twan@reijin"
+				comment={projects[projectIndex].comment}
+				{fontSize}
+				minY={(h * 2.5) / 2 + timelineHeight}
+				subtitleAfterDot="ga"
+			/>
 		</div>
 	{/if}
 </section>
@@ -112,7 +121,12 @@
 
 <section class="right timeline">
 	{#if y > h / 1.3}
-		<Timeline {fontSize} minH={h * 1.25} bind:lastScrolledItem={projectIndex} />
+		<Timeline
+			{fontSize}
+			minH={h * 1.25}
+			bind:lastScrolledItem={projectIndex}
+			bind:clientHeight={timelineHeight}
+		/>
 	{/if}
 </section>
 <section style="height: 100vh" />

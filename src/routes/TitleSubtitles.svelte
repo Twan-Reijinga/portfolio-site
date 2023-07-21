@@ -8,6 +8,7 @@
 	export let fontSize: number;
 	export let minY = -1;
 	export let maxY = Infinity;
+	export let subtitleAfterDot = '';
 	let y: number;
 	let loaded = false;
 	let isFirstLoad = true;
@@ -39,7 +40,7 @@
 			</h1>
 		</div>
 		<h2 style="font-size: {fontSize}px" transition:fade={{ duration: transitionTime }}>
-			{subtitle}
+			{subtitle}<span>.</span>{subtitleAfterDot}
 		</h2>
 		<h4
 			style="font-size: {fontSize / 3}px; opacity: {comment ? 1 : 0}"
