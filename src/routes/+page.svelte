@@ -31,13 +31,24 @@
 		fontSize = updateFontSize();
 	});
 
-	function getLanguageInfo(language: string) {
-		let languageInfo;
-		languages.forEach((lang) => {
-			if (lang.text === language) {
-				languageInfo = lang;
-				return;
-			}
+	interface Language {
+		text: string;
+		color: string;
+		textColor: string;
+	}
+
+	function getLanguages(languageNames: string[] | undefined): Language[] {
+		if (!languages) {
+			return [];
+		}
+		let languageInfo: Language[] = [];
+		languageNames?.forEach((languageName) => {
+			languages.forEach((lang) => {
+				if (lang.text === languageName) {
+					languageInfo.push(lang);
+					return;
+				}
+			});
 		});
 		return languageInfo;
 	}
@@ -75,13 +86,13 @@
 				minY={(h * 2.5) / 2}
 				maxY={(h * 5) / 2}
 			/>
-			<div class="projLangs">
-				{#if projects[projectIndex].languages}
-					{#each projects[projectIndex].languages as language}
+			<div class="projLangs" style="margin-top: {fontSize * 5}px">
+				{#if projects[projectIndex] && typeof projects[projectIndex].languages}
+					{#each getLanguages(projects[projectIndex].languages) as language}
 						<Language
-							text={language}
-							color={getLanguageInfo(language).color}
-							textColor={getLanguageInfo(language).textColor}
+							text={language.text}
+							color={language.color}
+							textColor={language.textColor}
 							fontSize={fontSize / 3}
 						/>
 					{/each}
@@ -125,10 +136,8 @@
 	.projLangs {
 		position: fixed;
 		display: flex;
-		justify-content: center;
-		/* align-items: start; */
+		justify-content: right;
 		flex-wrap: wrap;
-		width: 40%;
-		margin-top: 25%;
+		width: 30%;
 	}
 </style>

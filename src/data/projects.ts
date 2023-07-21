@@ -10,6 +10,7 @@ interface Project {
 	img?: string;
 	cardType: 'full' | 'small';
 }
+
 const projects: Project[] = [
 	{
 		title: 'slidify',
