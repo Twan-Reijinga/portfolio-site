@@ -15,7 +15,7 @@
 		the greatest thing there is.<br />
 		Besides programming, you can find<br />
 		me <span>rowing</span> on the Amstel River or<br />
-		giving <span>sailinstuction</span> in Loosdrecht.<br />
+		help kids make <span>robots</span> at NewTechKids.<br />
 	</h3>
 	<Subject text="Most used languages" fontSize={fontSize / 2.2} image="programming" />
 	{#if y > h / 1.4}

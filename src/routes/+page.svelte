@@ -10,6 +10,7 @@
 	import ScrollText from './ScrollText.svelte';
 	import About from './About.svelte';
 	import Timeline from './Timeline.svelte';
+	import Contact from './Contact.svelte';
 	import Language from './Language.svelte';
 
 	let loadTitleSubtitles = false;
@@ -101,8 +102,8 @@
 			{/if}
 			<TitleSubtitle
 				title="ContactMe()"
-				subtitle="Twan@reijin"
-				subtitleAfterDot="ga"
+				subtitle="Reijinga@tuta"
+				subtitleAfterDot="io"
 				comment={projects[projectIndex].comment}
 				{fontSize}
 				minY={(h * 2.5) / 2 + timelineHeight}
@@ -129,8 +130,8 @@
 		/>
 	{/if}
 </section>
-<section style="height: 100vh">
-	<!-- <Contact /> -->
+<section class="right" style="height: 100vh">
+	<Contact minY={(h * 2.5) / 2 + timelineHeight} />
 </section>
 
 <style>
