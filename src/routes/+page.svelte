@@ -130,7 +130,7 @@
 		/>
 	{/if}
 </section>
-<section class="right" style="height: 100vh">
+<section class="right" style="height: {timelineHeight + h / 2}px">
 	<Contact minY={(h * 2.5) / 2 + timelineHeight} />
 </section>
 

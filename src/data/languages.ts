@@ -18,7 +18,7 @@ const languages: Language[] = [
 	// { text: 'C#', color: '#984D94', textColor: '#fff' },
 	{ text: 'CSS', color: '#006EB6', textColor: '#fff' },
 	{ text: 'ELM', color: '#5C6278', textColor: '#fff' },
-	// { text: 'Unity', color: '#6D6D6D', textColor: '#fff' },
+	{ text: 'Unity', color: '#6D6D6D', textColor: '#fff' },
 	{ text: 'R', color: '#1F63B6', textColor: '#fff' }
 ];
 
