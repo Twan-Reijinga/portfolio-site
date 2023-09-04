@@ -60,6 +60,7 @@
 					discription={project.discription}
 					fakeFileName={project.fakeFileName}
 					img={project.img}
+					url={project.url}
 					cardType={project.cardType}
 					activated={y > getScrollDistanceToDot(i)}
 				/>

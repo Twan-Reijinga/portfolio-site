@@ -7,6 +7,7 @@
 	export let discription = '';
 	export let fakeFileName = '';
 	export let img = '';
+	export let url: string;
 	export let activated: boolean;
 	export let cardType: 'small' | 'full';
 	let cardState: 'minimized' | 'maximized' = 'maximized';
@@ -54,7 +55,9 @@
 				</div>
 				<div class="footer">
 					<h4 class="date">// {date}</h4>
-					<GithubButton url="https://github.com/Twan-Reijinga" />
+					{#if url !== 'none'}
+						<GithubButton url="https://{url}" />
+					{/if}
 				</div>
 			</div>
 		{:else if cardType == 'small' || cardState == 'minimized'}

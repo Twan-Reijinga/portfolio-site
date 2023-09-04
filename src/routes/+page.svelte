@@ -104,7 +104,7 @@
 				title="ContactMe()"
 				subtitle="Reijinga@tuta"
 				subtitleAfterDot="io"
-				comment={projects[projectIndex].comment}
+				comment="Metis Montessori Lyceum"
 				{fontSize}
 				minY={(h * 2.5) / 2 + timelineHeight}
 			/>
