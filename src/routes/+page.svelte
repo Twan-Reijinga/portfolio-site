@@ -115,22 +115,22 @@
 	<ScrollText {fontSize} opacity={100 / y} />
 {/if}
 <section class="right">
-	{#if y > h / 1.6}
-		<About {fontSize} />
-	{/if}
+	<!-- {#if y > h / 1.6} -->
+	<About {fontSize} />
+	<!-- {/if} -->
 </section>
 
 <section class="right timeline">
-	{#if y > h / 1.3}
-		<Timeline
-			{fontSize}
-			minH={h * 1.25}
-			bind:lastScrolledItem={projectIndex}
-			bind:clientHeight={timelineHeight}
-		/>
-	{/if}
+	<!-- {#if y > h / 1.3} -->
+	<Timeline
+		{fontSize}
+		minH={h * 1.25}
+		bind:lastScrolledItem={projectIndex}
+		bind:clientHeight={timelineHeight}
+	/>
+	<!-- {/if} -->
 </section>
-<section class="right" style="height: {timelineHeight + h / 2}px">
+<section class="right" style="height: {timelineHeight}px">
 	<Contact minY={(h * 2.5) / 2 + timelineHeight} />
 </section>
 
@@ -156,5 +156,26 @@
 		justify-content: right;
 		flex-wrap: wrap;
 		width: 30%;
+	}
+
+	@media screen and (max-width: 750px) {
+		.centered {
+			justify-content: start;
+			top: 0;
+		}
+		.centered * {
+			z-index: 3;
+		}
+		.left {
+			height: 100vh;
+			width: 100%;
+		}
+		.right {
+			margin-left: 0;
+			width: 100%;
+		}
+		.projLangs {
+			display: none;
+		}
 	}
 </style>

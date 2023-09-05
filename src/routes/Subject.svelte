@@ -8,18 +8,19 @@
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerHeight={h} />
-{#if y > h / 1.5}
-	<div class="horizontal" transition:fade={{ duration: 100 }}>
-		<div
-			class="imageHolder"
-			style="width: {fontSize * 1.5}px; height: {fontSize * 1.5}px; 
+<!-- {#if y > h / 1.5} -->
+<div class="horizontal" transition:fade={{ duration: 100 }}>
+	<div
+		class="imageHolder"
+		style="width: {fontSize * 1.5}px; height: {fontSize * 1.5}px; 
                box-shadow: {fontSize / 4}px {-fontSize / 4}px #00000099;"
-		>
-			<div class="image {image}" />
-		</div>
-		<h3 style="font-size: {fontSize}px;">{text}</h3>
+	>
+		<div class="image {image}" />
 	</div>
-{/if}
+	<h3 style="font-size: {fontSize}px;">{text}</h3>
+</div>
+
+<!-- {/if} -->
 
 <style>
 	.horizontal {

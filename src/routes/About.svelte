@@ -18,18 +18,18 @@
 		help kids make <span>robots</span> at NewTechKids.<br />
 	</h3>
 	<Subject text="Most used languages" fontSize={fontSize / 2.2} image="programming" />
-	{#if y > h / 1.4}
-		<div class="languageCards" transition:fade={{ duration: 100 }}>
-			{#each languages as language}
-				<Language
-					text={language.text}
-					color={language.color}
-					textColor={language.textColor}
-					fontSize={fontSize / 3}
-				/>
-			{/each}
-		</div>
-	{/if}
+	<!-- {#if y > h / 1.4} -->
+	<div class="languageCards" transition:fade={{ duration: 100 }}>
+		{#each languages as language}
+			<Language
+				text={language.text}
+				color={language.color}
+				textColor={language.textColor}
+				fontSize={fontSize / 3}
+			/>
+		{/each}
+	</div>
+	<!-- {/if} -->
 </div>
 
 <style>

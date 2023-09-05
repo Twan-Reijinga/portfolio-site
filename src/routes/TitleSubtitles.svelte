@@ -76,4 +76,12 @@
 		text-align: right;
 		width: 100%;
 	}
+
+	@media screen and (max-width: 750px) {
+		.fixedBox {
+			background-color: #162632;
+			width: 100%;
+			padding: 0 20% 10px 20%;
+		}
+	}
 </style>

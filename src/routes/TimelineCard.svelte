@@ -136,13 +136,13 @@
 	}
 	.grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 		grid-gap: 30px;
 		margin-top: 15px;
 	}
 	.projectImg {
-		min-width: 200px;
-		min-height: 250px;
+		min-width: 90px;
+		min-height: 100px;
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: contain;
