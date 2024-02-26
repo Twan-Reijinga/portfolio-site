@@ -44,7 +44,7 @@
 			</div>
 			<div class="main" transition:slide>
 				<h5 class="command">
-					[twan@arch]$ head {fakeFileName}.md
+					[twan]$ preview {fakeFileName}.txt
 				</h5>
 				<div class="grid">
 					<h5 class="out">{discription}</h5>
