@@ -14,13 +14,15 @@
 
 <style>
 	.card {
-		padding: 1% 5%;
-		margin: 0.5% 0.5%;
+		padding: 0.8% 5%;
+		margin: 0.8% 0.8%;
 		background-color: #000;
-		border-radius: 100em;
+		/* border-radius: 100em; */
+		transform: skew(-10deg);
 	}
 	h1 {
 		color: #fff;
 		text-align: right;
+		transform: skew(10deg);
 	}
 </style>

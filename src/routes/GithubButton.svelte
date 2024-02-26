@@ -16,7 +16,7 @@
 		transition: all 0.2s;
 	}
 	.button {
-		transform: skew(-30deg);
+		transform: skew(-15deg);
 		border: 1px solid #fff;
 		padding: 5px 20px;
 		margin-top: -38px;
@@ -31,7 +31,7 @@
 		margin-top: 4px;
 		margin-left: 10px;
 		background-color: #06cb79;
-		transform: skew(-30deg);
+		transform: skew(-15deg);
 		z-index: -1;
 		transition: all 0.2s;
 	}
@@ -40,7 +40,7 @@
 		margin: 4px -10px -4px 10px;
 	}
 	.buttonBox:hover .shadow {
-		transform: skew(-30deg);
+		transform: skew(-15deg);
 		margin: 0;
 	}
 	.buttonBox:hover .button {
@@ -50,6 +50,6 @@
 
 	h4 {
 		white-space: nowrap;
-		transform: skew(30deg);
+		transform: skew(15deg);
 	}
 </style>
