@@ -1,51 +1,50 @@
 <script lang="ts">
 	export let url: string;
 </script>
-
 <a class="buttonBox" href={url} target="_blank">
-	<div class="shadow" />
 	<div class="button">
 		<h4>// View Github</h4>
 	</div>
+	<div class="shadow" />
 </a>
 
 <style>
-	.buttonBox {
+	.buttonBox{
+		transform: skew(-15deg);
 		cursor: pointer;
 		text-decoration: none;
 		transition: all 0.2s;
 	}
 	.button {
-		transform: skew(-15deg);
 		border: 1px solid #fff;
 		padding: 5px 20px;
-		margin-top: -38px;
+		margin-right: 10px;
 		background-color: #ffffff00;
 		z-index: 1;
 		transform-style: preserve-3d;
 		transition: all 0.2s;
 	}
 	.shadow {
-		width: 100%;
+		width:  calc(100% - 10px);
 		height: 34px;
-		margin-top: 4px;
+		margin-top: -26px;
 		margin-left: 10px;
 		background-color: #06cb79;
-		transform: skew(-15deg);
 		z-index: -1;
 		transition: all 0.2s;
 	}
 
-	.buttonBox:hover {
-		margin: 4px -10px -4px 10px;
-	}
 	.buttonBox:hover .shadow {
-		transform: skew(-15deg);
-		margin: 0;
+		margin-top: -34px;
+		margin-left: 0px;
+		width: 100%;
+	}
+	.buttonBox:hover{
+		padding-top: 8px;
+		padding-left: 10px;
 	}
 	.buttonBox:hover .button {
-		margin-top: -34px;
-		/* border-color: #06cb79; */
+		margin-right: 0px;
 	}
 
 	h4 {
