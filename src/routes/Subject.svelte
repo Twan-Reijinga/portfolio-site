@@ -31,7 +31,7 @@
 	.imageHolder {
 		background-image: var(--image);
 		background-color: #fff;
-		border-radius: 20%;
+		border-radius: 12%;
 		transform: rotate(45deg);
 	}
 	.horizontal h3 {

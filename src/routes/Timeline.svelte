@@ -50,7 +50,7 @@
 <svelte:window bind:scrollY={y} bind:innerHeight={h} />
 <div class="container">
 	<div class="projectsBox">
-		<Subject text="Projects & Expience" image="experience" fontSize={fontSize / 2.2} />
+		<Subject text="Projects & Experience" image="experience" fontSize={fontSize / 2.2} />
 		<div class="cards">
 			{#each projects as project, i}
 				<TimelineCard

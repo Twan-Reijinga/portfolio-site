@@ -50,5 +50,6 @@
 	h4 {
 		white-space: nowrap;
 		transform: skew(15deg);
+		font-weight: 400;
 	}
 </style>
