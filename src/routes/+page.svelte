@@ -68,7 +68,7 @@
 			<TitleSubtitle
 				title="Hello World!"
 				subtitle="I'm Twan"
-				comment="17 year old programming enthusiast"
+				comment="18 year old programming enthusiast"
 				{fontSize}
 				maxY={h / 2}
 			/>
