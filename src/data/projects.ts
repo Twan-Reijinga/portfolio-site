@@ -1,4 +1,5 @@
 import mazeSwapImg from '$lib/assets/images/mazeswap.png';
+import traficSimImg from '$lib/assets/images/traficSim.png';
 
 interface Project {
 	title: string;
@@ -16,17 +17,19 @@ const projects: Project[] = [
 	{
 		title: 'PWS AI Trafic Lights',
 		date: '01 feb. 2024',
-		discription: '...',
-		comment: 'Profiel werkstuk',
+		discription: 'Our PWS (ProfielWerkStuk) research is focused on optimizing the traffic light system with artificial intelligence. For this purpose, we built a traffic simulation and controlled it with a reinforcement learning algorithm. Traffic lights are essential in our society worldwide. With the increasing number of road users, traffic light optimization is becoming an increasingly urgent issue. Great advances in technology and artificial intelligence offer opportunities to address this issue. Behind our current traffic lights are already complex algorithms that continuously make calculations to guide everyone from A to B as smoothly as possible. But how do these algorithms work? How can artificial intelligence improve this? Which algorithms are best suited? And what data does artificial intelligence need for efficient flow? These questions are at the heart of our comprehensive research.',
+		comment: '247 hours to make the PWS of our dreams',
 		languages: ['Unity', 'Python'],
 		fakeFileName: 'AITraficLights',
+		img: traficSimImg,
+		url: 'github.com/Twan-Reijinga/TrafficLight-AI',
 		cardType: 'full'
 	},
 	{
 		title: 'This Portfolio site',
 		date: '04 sep. 2023',
 		discription:
-			'The site you are currently visiting is version 3 of my personalized portfolio website. I had the design already sitting for years, and I always like to improve on my already nice portfolio site. This was the first time using Svelte to make something and it realy suprized me how much details and animation are now at my fingertips that where not possible without! Like the keyframing of the earth and moon on the top of this page took me ages but looks so nice now!',
+			'The site you are currently visiting is version 3 of my personalized portfolio website. I had the design already sitting for years, and I always like to improve on my already nice portfolio site. This was the first time using Svelte to make something and it realy suprized me how much details and animation are now at my fingertips that where not possible before! Like the keyframing of the earth and moon on the top of this page took me ages, but looks so nice now! Hope you like it too :)',
 		comment: 'Version 3',
 		languages: ['CSS', 'TS', 'Svelte'],
 		fakeFileName: 'Portfolio',
