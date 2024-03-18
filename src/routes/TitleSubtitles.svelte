@@ -10,7 +10,6 @@
 	export let title: string;
 	export let subtitle: string = '';
 	export let comment: string = '';
-	export let fontSize: number;
 	export let minY = -1;
 	export let maxY = Infinity;
 	export let isWithProjLangs: boolean = false;
@@ -70,11 +69,11 @@
 				{title}
 			</h1>
 		</div>
-		<h2 style="font-size: {fontSize}px" transition:fade={{ duration: transitionTime }}>
+		<h2 transition:fade={{ duration: transitionTime }}>
 			{subtitle}<span>.</span>{subtitleAfterDot}
 		</h2>
 		<h4
-			style="font-size: {fontSize / 3}px; opacity: {comment ? 1 : 0}"
+			style="opacity: {comment ? 1 : 0}"
 			transition:fade={{ duration: transitionTime }}
 		>
 			// {comment ? comment : ''}
@@ -86,7 +85,6 @@
 						text={language.text}
 						color={language.color}
 						textColor={language.textColor}
-						fontSize={fontSize / 3}
 					/>
 				{/each}
 			</div>

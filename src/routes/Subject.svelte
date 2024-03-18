@@ -2,7 +2,6 @@
 	import { fade } from 'svelte/transition';
 	export let text: string;
 	export let image: 'programming' | 'experience';
-	export let fontSize: number;
 	let y: number;
 	let h: number;
 </script>
@@ -11,12 +10,10 @@
 <div class="horizontal" transition:fade={{ duration: 100 }}>
 	<div
 		class="imageHolder"
-		style="width: {fontSize * 1.5}px; height: {fontSize * 1.5}px; 
-               box-shadow: {fontSize / 4}px {-fontSize / 4}px #00000099;"
 	>
 		<div class="image {image}" />
 	</div>
-	<h3 style="font-size: {fontSize}px;">{text}</h3>
+	<h3>{text}</h3>
 </div>
 
 
@@ -26,14 +23,18 @@
 		justify-content: right;
 	}
 	.imageHolder {
+		width: 35px;
+		height: 35px;
 		background-image: var(--image);
 		background-color: #fff;
 		border-radius: 12%;
 		transform: rotate(45deg);
+		box-shadow: 7px -7px #000000AA;
 	}
 	.horizontal h3 {
 		padding-left: 5%;
 		line-height: 1.5;
+		font-size: 25px;
 	}
 	.image {
 		background-position: center center;

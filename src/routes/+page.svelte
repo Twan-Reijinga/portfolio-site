@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount, afterUpdate } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import { updateFontSize, getAge } from '../util';
+	import { getAge } from '../getAge';
 	import '../styles/global.css';
 	import projects from '../data/projects';
 	import SpaceBackground from './SpaceBackground.svelte';
@@ -15,22 +15,12 @@
 	let y = 0;
 	let h = 0;
 	let projectIndex = 0;
-	let fontSize: number;
 	let timelineHeight: number;
 	let age = getAge();
 
-	onMount(() => {
-		window.addEventListener('resize', () => {
-			fontSize = updateFontSize();
-		});
-	});
 	setTimeout(() => {
 		loadTitleSubtitles = true;
 	}, 2400);
-
-	afterUpdate(() => {
-		fontSize = updateFontSize();
-	});
 </script>
 
 <svelte:head>
@@ -46,7 +36,6 @@
 				title="Hello World!"
 				subtitle="I'm Twan"
 				comment="{age} year old programming enthusiast"
-				{fontSize}
 				maxY={h / 2}
 			/>
 		</div>
@@ -54,7 +43,6 @@
 			title="AboutMe()"
 			subtitle="I'm Twan"
 			comment="Amsterdam"
-			{fontSize}
 			minY={h / 2}
 			maxY={(h * 2.5) / 2}
 		/>
@@ -62,7 +50,6 @@
 			title="Timeline()"
 			subtitle={projects[projectIndex].title}
 			comment={projects[projectIndex].comment}
-			{fontSize}
 			minY={(h * 2.5) / 2}
 			maxY={(h * 2.5) / 2 + timelineHeight}
 			isWithProjLangs={true}
@@ -73,24 +60,20 @@
 			subtitle="Reijinga@tuta"
 			subtitleAfterDot="io"
 			comment="Metis Montessori Lyceum"
-			{fontSize}
 			minY={(h * 2.5) / 2 + timelineHeight}
 		/>
 	{/if}
 </section>
 {#if y < 100}
-	<ScrollText {fontSize} opacity={100 / y} />
+	<ScrollText />
 {/if}
 <section class="right">
-	<!-- {#if y > h / 1.6} -->
-	<About {fontSize} />
-	<!-- {/if} -->
+	<About />
 </section>
 
 <section class="right timeline">
 	<!-- {#if y > h / 1.3} -->
 	<Timeline
-		{fontSize}
 		minH={h * 1.25}
 		bind:lastScrolledItem={projectIndex}
 		bind:clientHeight={timelineHeight}
@@ -118,20 +101,12 @@
 			top: 0;
 			margin: 0;
 			z-index: 2;
-		}
-		.left * {
-			z-index: 3;
-		}
-		.left {
 			height: 100vh;
 			width: 100%;
 		}
 		.right {
 			margin-left: 0;
 			width: 100%;
-		}
-		.projLangs {
-			display: none;
 		}
 	}
 </style>

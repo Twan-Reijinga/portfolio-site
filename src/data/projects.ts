@@ -85,7 +85,7 @@ const projects: Project[] = [
 		date: '08 jul. 2022',
 		discription:
 			'Orbital Assist is a game made by Adam, Roemer, Thijs and Twan for the GameJam of the Coderclass at Metis Montessori Lyceum 2022. On 8 July, everyone had seven hours to make a game that fits the theme 30 seconds. This game won in the category originality.',
-		comment: '1st for originality at the Metis Gamejam 2022',
+		comment: '#1 originality Metis Gamejam 2022',
 		languages: ['JS', 'P5'],
 		fakeFileName: 'OrbitalAssist',
 		url: 'github.com/Twan-Reijinga/orbital-assist-game',

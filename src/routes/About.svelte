@@ -3,21 +3,20 @@
 	import languages from '../data/languages';
 	import Subject from './Subject.svelte';
 	import Language from './Language.svelte';
-	export let fontSize: number;
 	let y: number;
 	let h: number;
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerHeight={h} />
 <div class="aboutBox" transition:fade={{ duration: 100 }}>
-	<h3 style="font-size: {fontSize / 2.2}px">
+	<h3 class="aboutText">
 		<span>Programming</span> is, apart from <span>skiing</span>,<br />
 		the greatest thing there is.<br />
 		Besides programming, you can find<br />
 		me <span>rowing</span> on the Amstel River or<br />
 		help kids make <span>robots</span> at NewTechKids.<br />
 	</h3>
-	<Subject text="Most used languages" fontSize={fontSize / 2.2} image="programming" />
+	<Subject text="Most used languages" image="programming" />
 	<!-- {#if y > h / 1.4} -->
 	<div class="languageCards" transition:fade={{ duration: 100 }}>
 		{#each languages as language}
@@ -25,7 +24,6 @@
 				text={language.text}
 				color={language.color}
 				textColor={language.textColor}
-				fontSize={fontSize / 3}
 			/>
 		{/each}
 	</div>
@@ -40,6 +38,9 @@
 	.aboutBox h3 {
 		top: 0;
 		text-align: right;
+	}
+	.aboutText {
+		font-size: 30px;
 	}
 	.languageCards {
 		margin-top: 2vh;

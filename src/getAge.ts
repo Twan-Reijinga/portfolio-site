@@ -1,7 +1,3 @@
-export function updateFontSize() {
-	return 48;
-}
-
 export function getAge(): number {
 	const currentDate: Date = new Date();
 	const targetDate: Date = new Date(2005, 9, 8);
@@ -14,4 +10,4 @@ export function getAge(): number {
 	return differenceYears;
 }
 
-export default { updateFontSize, getAge };
+export default { getAge };

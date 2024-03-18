@@ -4,7 +4,6 @@
 	import Subject from './Subject.svelte';
 	import TimelineCard from './TimelineCard.svelte';
 	import TimelineLine from './TimelineLine.svelte';
-	export let fontSize: number;
 	export let minH: number;
 	export let lastScrolledItem = 0;
 	export let clientHeight: number;
@@ -50,7 +49,7 @@
 <svelte:window bind:scrollY={y} bind:innerHeight={h} />
 <div class="container">
 	<div class="projectsBox">
-		<Subject text="Projects & Experience" image="experience" fontSize={fontSize / 2.2} />
+		<Subject text="Projects & Experience" image="experience" />
 		<div class="cards">
 			{#each projects as project, i}
 				<TimelineCard
@@ -67,7 +66,7 @@
 			{/each}
 		</div>
 	</div>
-	<TimelineLine fontSize={fontSize * (15 / 44)} bind:height={clientHeight} bind:minH bind:maxH />
+	<TimelineLine bind:height={clientHeight} bind:minH bind:maxH />
 </div>
 
 <style>
