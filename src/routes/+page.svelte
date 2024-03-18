@@ -4,14 +4,12 @@
 	import { updateFontSize, getAge } from '../util';
 	import './global.css';
 	import projects from '../data/projects';
-	import languages from '../data/languages';
 	import SpaceBackground from './SpaceBackground.svelte';
 	import TitleSubtitle from './TitleSubtitles.svelte';
 	import ScrollText from './ScrollText.svelte';
 	import About from './About.svelte';
 	import Timeline from './Timeline.svelte';
 	import Contact from './Contact.svelte';
-	import Language from './Language.svelte';
 
 	let loadTitleSubtitles = false;
 	let y = 0;
@@ -33,28 +31,6 @@
 	afterUpdate(() => {
 		fontSize = updateFontSize();
 	});
-
-	interface Language {
-		text: string;
-		color: string;
-		textColor: string;
-	}
-
-	function getLanguages(languageNames: string[] | undefined): Language[] {
-		if (!languages) {
-			return [];
-		}
-		let languageInfo: Language[] = [];
-		languageNames?.forEach((languageName) => {
-			languages.forEach((lang) => {
-				if (lang.text === languageName) {
-					languageInfo.push(lang);
-					return;
-				}
-			});
-		});
-		return languageInfo;
-	}
 </script>
 
 <svelte:head>
@@ -74,42 +50,32 @@
 				maxY={h / 2}
 			/>
 		</div>
-			<TitleSubtitle
-				title="AboutMe()"
-				subtitle="I'm Twan"
-				comment="Amsterdam"
-				{fontSize}
-				minY={h / 2}
-				maxY={(h * 2.5) / 2}
-			/>
-			<TitleSubtitle
-				title="Timeline()"
-				subtitle={projects[projectIndex].title}
-				comment={projects[projectIndex].comment}
-				{fontSize}
-				minY={(h * 2.5) / 2}
-				maxY={(h * 2.5) / 2 + timelineHeight}
-			/>
-			{#if y > (h * 2.5) / 2 && y < (h * 2.5) / 2 + timelineHeight && projects[projectIndex].languages}
-				<div class="projLangs">
-					{#each getLanguages(projects[projectIndex].languages) as language}
-						<Language
-							text={language.text}
-							color={language.color}
-							textColor={language.textColor}
-							fontSize={fontSize / 3}
-						/>
-					{/each}
-				</div>
-			{/if}
-			<TitleSubtitle
-				title="ContactMe()"
-				subtitle="Reijinga@tuta"
-				subtitleAfterDot="io"
-				comment="Metis Montessori Lyceum"
-				{fontSize}
-				minY={(h * 2.5) / 2 + timelineHeight}
-			/>
+		<TitleSubtitle
+			title="AboutMe()"
+			subtitle="I'm Twan"
+			comment="Amsterdam"
+			{fontSize}
+			minY={h / 2}
+			maxY={(h * 2.5) / 2}
+		/>
+		<TitleSubtitle
+			title="Timeline()"
+			subtitle={projects[projectIndex].title}
+			comment={projects[projectIndex].comment}
+			{fontSize}
+			minY={(h * 2.5) / 2}
+			maxY={(h * 2.5) / 2 + timelineHeight}
+			isWithProjLangs={true}
+			{projectIndex}
+		/>
+		<TitleSubtitle
+			title="ContactMe()"
+			subtitle="Reijinga@tuta"
+			subtitleAfterDot="io"
+			comment="Metis Montessori Lyceum"
+			{fontSize}
+			minY={(h * 2.5) / 2 + timelineHeight}
+		/>
 	{/if}
 </section>
 {#if y < 100}
@@ -136,12 +102,6 @@
 </section>
 
 <style>
-	/* .centered {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	} */
 	.left {
 		height: 100vh;
 	}
@@ -150,14 +110,6 @@
 	}
 	.timeline {
 		height: 100vh;
-	}
-	.projLangs {
-		position: fixed;
-		display: flex;
-		justify-content: right;
-		flex-wrap: wrap;
-		width: 30%;
-		margin: 63vh 10%;
 	}
 
 	@media screen and (max-width: 750px) {

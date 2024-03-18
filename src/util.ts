@@ -14,4 +14,4 @@ export function getAge(): number {
 	return differenceYears;
 }
 
-export default { updateFontSize };
+export default { updateFontSize, getAge };

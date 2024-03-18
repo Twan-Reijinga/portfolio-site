@@ -2,17 +2,27 @@
 	import { onMount } from 'svelte';
 	import { fly, fade } from 'svelte/transition';
 	import './textStyles.css';
+
+	import languages from '../data/languages';
+	import Language from './Language.svelte';
+	import projects from '../data/projects';
+
 	export let title: string;
 	export let subtitle: string = '';
 	export let comment: string = '';
 	export let fontSize: number;
 	export let minY = -1;
 	export let maxY = Infinity;
+	export let isWithProjLangs: boolean = false;
 	export let subtitleAfterDot = '';
+	export let projectIndex: number = 0;
+	console.log(projectIndex);
+
 	let y: number;
 	let loaded = false;
 	let isFirstLoad = true;
 	let transitionTime = 100;
+
 	onMount(() => {
 		loaded = true;
 		if (loaded && isFirstLoad) {
@@ -21,6 +31,28 @@
 			}, transitionTime * 1.1);
 		}
 	});
+
+	interface Language {
+		text: string;
+		color: string;
+		textColor: string;
+	}
+
+	function getLanguages(languageNames: string[] | undefined): Language[] {
+		if (!languages) {
+			return [];
+		}
+		let languageInfo: Language[] = [];
+		languageNames?.forEach((languageName) => {
+			languages.forEach((lang) => {
+				if (lang.text === languageName) {
+					languageInfo.push(lang);
+					return;
+				}
+			});
+		});
+		return languageInfo;
+	}
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -47,6 +79,18 @@
 		>
 			// {comment ? comment : ''}
 		</h4>
+		{#if isWithProjLangs && projects[projectIndex].languages}
+			<div class="projLangs">
+				{#each getLanguages(projects[projectIndex].languages) as language}
+					<Language
+						text={language.text}
+						color={language.color}
+						textColor={language.textColor}
+						fontSize={fontSize / 3}
+					/>
+				{/each}
+			</div>
+		{/if}
 	</div>
 {/if}
 
@@ -66,13 +110,20 @@
 	}
 	h2 {
 		padding-top: 70px;
-		/* padding-right: 12%; */
-		/* position: absolute; */
 		text-align: center;
 	}
 	h4 {
 		text-align: right;
 		width: 100%;
+	}
+
+	.projLangs {
+		position: fixed;
+		display: flex;
+		justify-content: right;
+		flex-wrap: wrap;
+		width: 30%;
+		margin: 2% 5%;
 	}
 
 	@media screen and (max-width: 750px) {
