@@ -112,7 +112,7 @@
 		height: 100vh;
 	}
 
-	@media screen and (max-width: 750px) {
+	@media screen and (max-width: 900px) {
 		.left {
 			justify-content: start;
 			top: 0;

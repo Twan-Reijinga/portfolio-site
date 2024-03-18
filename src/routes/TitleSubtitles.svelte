@@ -100,10 +100,12 @@
 		width: 40%;
 		max-width: 1000px;
 		margin: 40vh 5%;
+		z-index: 3;
 	}
 	.titleBox {
 		position: absolute;
 		width: 75%;
+		min-width: 400px;
 		padding: 0 2%;
 		background-color: #06cb79;
 		text-align: center;
@@ -126,11 +128,18 @@
 		margin: 2% 5%;
 	}
 
-	@media screen and (max-width: 750px) {
+	@media screen and (max-width: 900px) {
 		.fixedBox {
 			background-color: #162632;
 			width: 100%;
-			padding: 0 20% 10px 20%;
+			padding: 0 20% 10px 0%;
+			margin: 0;
+		}
+		.titleBox {
+			width: 100%;
+		}
+		.projLangs {
+			display: none;
 		}
 	}
 </style>
