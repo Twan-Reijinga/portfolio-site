@@ -28,7 +28,6 @@
 	<div class="fixedBox">
 		<div class="titleBox" in:fade={{ delay: isFirstLoad ? 0 : transitionTime * 0.9, duration: 0 }}>
 			<h1
-				style="font-size: {fontSize}px"
 				in:fly={{
 					y: 50,
 					delay: isFirstLoad ? 0 : transitionTime,
@@ -56,14 +55,17 @@
 		position: fixed;
 		width: 40%;
 		max-width: 1000px;
+		margin: 40vh 5%;
 	}
 	.titleBox {
-		margin-right: 15%;
+		position: absolute;
+		width: 75%;
 		padding: 0 2%;
 		background-color: #06cb79;
 		text-align: center;
 	}
 	h2 {
+		padding-top: 70px;
 		/* padding-right: 12%; */
 		/* position: absolute; */
 		text-align: center;

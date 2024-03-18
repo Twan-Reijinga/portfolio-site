@@ -63,9 +63,9 @@
 
 <svelte:window bind:scrollY={y} bind:innerHeight={h} />
 <SpaceBackground />
-<section class="left centered">
+<section class="left">
 	{#if loadTitleSubtitles}
-		<div class="centered" in:fade={{ duration: 1000 }}>
+		<div class="" in:fade={{ duration: 1000 }}>
 			<TitleSubtitle
 				title="Hello World!"
 				subtitle="I'm Twan"
@@ -73,6 +73,7 @@
 				{fontSize}
 				maxY={h / 2}
 			/>
+		</div>
 			<TitleSubtitle
 				title="AboutMe()"
 				subtitle="I'm Twan"
@@ -90,7 +91,7 @@
 				maxY={(h * 2.5) / 2 + timelineHeight}
 			/>
 			{#if y > (h * 2.5) / 2 && y < (h * 2.5) / 2 + timelineHeight && projects[projectIndex].languages}
-				<div class="projLangs" style="margin-top: {fontSize * 5}px">
+				<div class="projLangs">
 					{#each getLanguages(projects[projectIndex].languages) as language}
 						<Language
 							text={language.text}
@@ -109,7 +110,6 @@
 				{fontSize}
 				minY={(h * 2.5) / 2 + timelineHeight}
 			/>
-		</div>
 	{/if}
 </section>
 {#if y < 100}
@@ -136,12 +136,12 @@
 </section>
 
 <style>
-	.centered {
+	/* .centered {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-	}
+	} */
 	.left {
 		height: 100vh;
 	}
@@ -157,14 +157,17 @@
 		justify-content: right;
 		flex-wrap: wrap;
 		width: 30%;
+		margin: 63vh 10%;
 	}
 
 	@media screen and (max-width: 750px) {
-		.centered {
+		.left {
 			justify-content: start;
 			top: 0;
+			margin: 0;
+			z-index: 2;
 		}
-		.centered * {
+		.left * {
 			z-index: 3;
 		}
 		.left {
