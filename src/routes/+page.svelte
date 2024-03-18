@@ -2,7 +2,7 @@
 	import { onMount, afterUpdate } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { updateFontSize, getAge } from '../util';
-	import './global.css';
+	import '../styles/global.css';
 	import projects from '../data/projects';
 	import SpaceBackground from './SpaceBackground.svelte';
 	import TitleSubtitle from './TitleSubtitles.svelte';

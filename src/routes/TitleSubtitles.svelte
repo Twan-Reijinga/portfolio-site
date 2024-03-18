@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { fly, fade } from 'svelte/transition';
-	import './textStyles.css';
+	import '../styles/textStyles.css';
 
 	import languages from '../data/languages';
 	import Language from './Language.svelte';
@@ -98,7 +98,7 @@
 	.fixedBox {
 		position: fixed;
 		width: 40%;
-		max-width: 1000px;
+		max-width: 700px;
 		margin: 40vh 5%;
 		z-index: 3;
 	}
