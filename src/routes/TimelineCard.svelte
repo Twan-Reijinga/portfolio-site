@@ -13,17 +13,6 @@
 	let cardState: 'minimized' | 'maximized' = 'maximized';
 	export let clientHeight = 0;
 
-	interface Params {
-		duration: number;
-	}
-	function increaseHeight(node: any, { duration }: Params) {
-		return {
-			duration,
-			css: (t: number) => {
-				return `height: ${t}`;
-			}
-		};
-	}
 	function toggleCardState() {
 		if (cardState == 'minimized') {
 			cardState = 'maximized';
@@ -136,13 +125,13 @@
 	}
 	.grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		grid-gap: 30px;
 		margin-top: 15px;
 	}
 	.projectImg {
-		min-width: 90px;
-		min-height: 100px;
+		min-width: 250px;
+		min-height: 250px;
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: contain;

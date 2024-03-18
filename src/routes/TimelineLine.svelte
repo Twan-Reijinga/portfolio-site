@@ -25,10 +25,9 @@
 	}
 	.line {
 		position: relative;
-		/* width: 10%; */
 		width: 2px;
 		background-color: #fff;
-		margin: 0 calc(50% - 1px);
+		margin: 0 50%;
 	}
 	.circle {
 		border: 0.5vh solid #06cb79;
@@ -41,7 +40,7 @@
 	.dot {
 		background-color: #fff;
 		position: absolute;
-		margin: 0 0.75vh;
+		margin: 0 0.76vh;
 		padding: 0.5vh;
 		border-radius: 50%;
 	}
