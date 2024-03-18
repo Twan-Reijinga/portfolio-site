@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount, afterUpdate } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import { updateFontSize } from '../util';
+	import { updateFontSize, getAge } from '../util';
 	import './global.css';
 	import projects from '../data/projects';
 	import languages from '../data/languages';
@@ -19,6 +19,7 @@
 	let projectIndex = 0;
 	let fontSize: number;
 	let timelineHeight: number;
+	let age = getAge();
 
 	onMount(() => {
 		window.addEventListener('resize', () => {
@@ -68,7 +69,7 @@
 			<TitleSubtitle
 				title="Hello World!"
 				subtitle="I'm Twan"
-				comment="17 year old programming enthusiast"
+				comment="18 year old programming enthusiast"
 				{fontSize}
 				maxY={h / 2}
 			/>

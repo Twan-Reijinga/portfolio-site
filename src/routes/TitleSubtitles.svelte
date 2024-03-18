@@ -55,7 +55,7 @@
 	.fixedBox {
 		position: fixed;
 		width: 40%;
-		max-width: 800px;
+		max-width: 1000px;
 	}
 	.titleBox {
 		margin-right: 15%;
@@ -63,14 +63,10 @@
 		background-color: #06cb79;
 		text-align: center;
 	}
-	h1,
-	h2,
-	h4 {
-		white-space: nowrap;
-	}
 	h2 {
-		padding-right: 12%;
-		text-align: right;
+		/* padding-right: 12%; */
+		/* position: absolute; */
+		text-align: center;
 	}
 	h4 {
 		text-align: right;

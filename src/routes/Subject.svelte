@@ -8,7 +8,6 @@
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerHeight={h} />
-<!-- {#if y > h / 1.5} -->
 <div class="horizontal" transition:fade={{ duration: 100 }}>
 	<div
 		class="imageHolder"
@@ -20,13 +19,11 @@
 	<h3 style="font-size: {fontSize}px;">{text}</h3>
 </div>
 
-<!-- {/if} -->
 
 <style>
 	.horizontal {
 		display: flex;
 		justify-content: right;
-		/* padding-top: 5vh; */
 	}
 	.imageHolder {
 		background-image: var(--image);
