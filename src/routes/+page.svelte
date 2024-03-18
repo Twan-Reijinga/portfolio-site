@@ -57,8 +57,8 @@
 		/>
 		<TitleSubtitle
 			title="ContactMe()"
-			subtitle="Reijinga@tuta"
-			subtitleAfterDot="io"
+			subtitle="reijinga@twan"
+			subtitleAfterDot="space"
 			comment="Metis Montessori Lyceum"
 			minY={(h * 2.5) / 2 + timelineHeight}
 		/>

@@ -1,5 +1,8 @@
 import mazeSwapImg from '$lib/assets/images/mazeswap.png';
 import traficSimImg from '$lib/assets/images/traficSim.png';
+import slidifyImg from '$lib/assets/images/slidify.jpeg';
+import novantaImg from '$lib/assets/images/novataApp.png';
+import orbitalImg from '$lib/assets/images/obitalAssist.png';
 
 interface Project {
 	title: string;
@@ -17,7 +20,8 @@ const projects: Project[] = [
 	{
 		title: 'PWS AI Trafic Lights',
 		date: '01 feb. 2024',
-		discription: 'Our PWS (ProfielWerkStuk) research is focused on optimizing the traffic light system with artificial intelligence. For this purpose, we built a traffic simulation and controlled it with a reinforcement learning algorithm. Traffic lights are essential in our society worldwide. With the increasing number of road users, traffic light optimization is becoming an increasingly urgent issue. Great advances in technology and artificial intelligence offer opportunities to address this issue. Behind our current traffic lights are already complex algorithms that continuously make calculations to guide everyone from A to B as smoothly as possible. But how do these algorithms work? How can artificial intelligence improve this? Which algorithms are best suited? And what data does artificial intelligence need for efficient flow? These questions are at the heart of our comprehensive research.',
+		discription:
+			'Our PWS (ProfielWerkStuk) research is focused on optimizing the traffic light system with artificial intelligence. For this purpose, we built a traffic simulation and controlled it with a reinforcement learning algorithm. Traffic lights are essential in our society worldwide. With the increasing number of road users, traffic light optimization is becoming an increasingly urgent issue. Great advances in technology and artificial intelligence offer opportunities to address this issue. Behind our current traffic lights are already complex algorithms that continuously make calculations to guide everyone from A to B as smoothly as possible. But how do these algorithms work? How can artificial intelligence improve this? Which algorithms are best suited? And what data does artificial intelligence need for efficient flow? These questions are at the heart of our comprehensive research.',
 		comment: '247 hours to make the PWS of our dreams',
 		languages: ['Unity', 'Python'],
 		fakeFileName: 'AITraficLights',
@@ -39,10 +43,11 @@ const projects: Project[] = [
 	{
 		title: 'Metis GameJam 2023',
 		date: '14 jul. 2023',
-		discription: '...',
+		discription:
+			'In a team of four, we developed a game for the second Metis GameJam. Our previous game was a big success and won #1 for orinality, so we had high hopes. The theme was RITUALS. That was a difficult theme for us, because we had no inspiration. We build a game that looks frindly. You need to take as much friends with you as you can find, but nothing is as it seams...',
 		languages: ['JS', 'P5'],
 		fakeFileName: 'MetisJam',
-		url: 'https://github.com/roembol2000/coderclass-gamejam-2023',
+		url: 'github.com/roembol2000/coderclass-gamejam-2023',
 		cardType: 'full'
 	},
 	{
@@ -65,6 +70,7 @@ const projects: Project[] = [
 		comment: 'Raspberry Pi music control!',
 		languages: ['Python'],
 		fakeFileName: 'Slidify',
+		img: slidifyImg,
 		url: 'github.com/Twan-Reijinga/slidify',
 		cardType: 'full'
 	},
@@ -80,6 +86,7 @@ const projects: Project[] = [
 			'Novata is a Hotel in the Casentino Hills in Italy. In a group of three we made an app that solves two big problems for the hotel. Firstly, there are minibars all over the village owned by Novanta where people could take drinks from. In the app you could register which item you took on you name so that you can get the bill later. Secondly, the app functioned as a sign up for experiences the hotel provided, like getting a massage or renting a bike.',
 		languages: ['React Native', 'Docker', 'TS', 'Postgress'],
 		fakeFileName: 'Slidify',
+		img: novantaImg,
 		url: 'none',
 		cardType: 'full'
 	},
@@ -91,14 +98,16 @@ const projects: Project[] = [
 		comment: '#1 originality Metis Gamejam 2022',
 		languages: ['JS', 'P5'],
 		fakeFileName: 'OrbitalAssist',
+		img: orbitalImg,
 		url: 'github.com/Twan-Reijinga/orbital-assist-game',
 		cardType: 'full'
 	},
 	{
 		title: 'Multiplayer pixelnary',
 		date: '07 jul. 2022',
-		discription: '...',
-		languages: ['JS', 'P5'],
+		discription:
+			'Multiplayer pixelnary was my first project where I tried to work with websockets to make a multiplayer game. The comsept is simple: like pixelnary you get something to draw, and you have to make a pixelart. The other persons in the group can guess. Next round someone else can draw. You can join server with codes and make your own.',
+		languages: ['JS', 'P5', 'NodeJS'],
 		fakeFileName: 'Slidify',
 		url: 'github.com/Twan-Reijinga/multiplayer-pixelnary',
 		cardType: 'full'
@@ -107,7 +116,7 @@ const projects: Project[] = [
 		title: 'AI learns to drive',
 		date: '22 jun. 2022',
 		discription:
-			'I made my own machine learning algorithm with reinforcement learning in JavaScript to let the AI drive a car in your own custom build circuit. With this project I learned how to create a network with nodes and worked with weights and biases that can mutate depending on a feedforward algorithm.',
+			'I made my own machine learning algorithm with reinforcement learning in JavaScript to let the AI drive a car in a circuit and optimaze for the best route. With this project I learned how to create a neural network with nodes and worked with weights, biases, mutations and the feedforward algorithm.',
 		comment: 'First AI project!',
 		languages: ['JS', 'P5'],
 		fakeFileName: 'AiLearnsToDrive',
@@ -126,19 +135,20 @@ const projects: Project[] = [
 		date: '23 jun. 2022',
 		cardType: 'small'
 	},
-	{
-		title: 'Problem Solving badge',
-		date: '19 feb. 2021',
-		discription: '...',
-		languages: ['Python'],
-		fakeFileName: 'ProblemSolving',
-		url: 'github.com/Twan-Reijinga/problem-solving',
-		cardType: 'full'
-	},
+	// {
+	// 	title: 'Problem Solving challanges',
+	// 	comment: 'Worked on challanging codeForces problems',
+	// 	date: '19 feb. 2021',
+	// 	languages: ['Python'],
+	// 	fakeFileName: 'ProblemSolving',
+	// 	url: 'github.com/Twan-Reijinga/problem-solving',
+	// 	cardType: 'small'
+	// },
 	{
 		title: 'Shopinglist telegram bot',
 		date: '28 jan. 2021',
-		discription: '...',
+		discription:
+			"To get a better understanding about API's, I created a Telegram bot that listens to commands to modify a shopping list. You can create groups, add people to the group and add items and delete things from it when you are in the grocery store.",
 		languages: ['Python'],
 		fakeFileName: 'ProblemSolving',
 		url: 'github.com/Twan-Reijinga/shared-shoppinglist-bot-telegram',
@@ -158,7 +168,8 @@ const projects: Project[] = [
 	{
 		title: 'Snake game',
 		date: '09 nov. 2020',
-		discription: '...',
+		discription:
+			'For an end project for game development in P5, I made a Snake game for the Arcade at Metis. It keeps track of the highscore and speed can be controlled via the main menu.',
 		comment: 'first Browser Game!',
 		languages: ['JS', 'P5'],
 		fakeFileName: 'Snake',
@@ -179,7 +190,7 @@ const projects: Project[] = [
 		title: 'Unity Roll a Ball',
 		date: '21 oct. 2020',
 		discription:
-			'First unity game where you control a ball that has to roll through a parcour of abstacles. Later that year I followed up with a plane flying game in unity.',
+			'First Unity game where you control a ball that has to roll through a parcour of abstacles. Later that year I followed up with a plane flying game in unity.',
 		languages: ['Unity'],
 		fakeFileName: 'RollABall',
 		url: 'github.com/Twan-Reijinga/unity-roll-a-ball-game',
@@ -188,7 +199,7 @@ const projects: Project[] = [
 	{
 		title: 'First Portfolio Website',
 		date: '23 dec. 2019',
-		discription: 'My first version of a portfolio website.',
+		discription: 'My first version of this portfolio website.',
 		languages: ['CSS', 'JS'],
 		fakeFileName: 'Portfolio',
 		url: 'github.com/Twan-Reijinga/portfolio',
