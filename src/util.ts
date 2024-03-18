@@ -7,11 +7,16 @@ export function updateFontSize() {
 	return fontSize;
 }
 
-export function getAge() {
-	let difference: number = Date.now() - new Date(2005, 8, 10).getTime();
-	let days: number = difference / (1000*60*60*24);
-	console.log(days);
-	return days;
+export function getAge(): number {
+	const currentDate: Date = new Date();
+	const targetDate: Date = new Date(2005, 9, 8);
+	let differenceYears: number = currentDate.getFullYear() - targetDate.getFullYear();
+
+	if ((currentDate.getMonth() === 9 && currentDate.getDate() < 8) || currentDate.getMonth() < 9) {
+		differenceYears--;
+	}
+
+	return differenceYears;
 }
 
 export default { updateFontSize };

@@ -14,6 +14,15 @@ interface Project {
 
 const projects: Project[] = [
 	{
+		title: 'PWS AI Trafic Lights',
+		date: '01 feb. 2024',
+		discription: '...',
+		comment: 'Profiel werkstuk',
+		languages: ['Unity', 'Python'],
+		fakeFileName: 'AITraficLights',
+		cardType: 'full'
+	},
+	{
 		title: 'This Portfolio site',
 		date: '04 sep. 2023',
 		discription:
