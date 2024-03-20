@@ -67,22 +67,24 @@
 {#if y < 100}
 	<ScrollText />
 {/if}
-<section class="right">
-	<About />
-</section>
+<div class="front">
+	<section class="right">
+		<About />
+	</section>
 
-<section class="right timeline">
-	<!-- {#if y > h / 1.3} -->
-	<Timeline
-		minH={h * 1.25}
-		bind:lastScrolledItem={projectIndex}
-		bind:clientHeight={timelineHeight}
-	/>
-	<!-- {/if} -->
-</section>
-<section class="right" style="height: {timelineHeight}px">
-	<Contact minY={(h * 2.5) / 2 + timelineHeight} />
-</section>
+	<section class="right timeline">
+		<!-- {#if y > h / 1.3} -->
+		<Timeline
+			minH={h * 1.25}
+			bind:lastScrolledItem={projectIndex}
+			bind:clientHeight={timelineHeight}
+		/>
+		<!-- {/if} -->
+	</section>
+	<section class="right" style="height: {timelineHeight}px">
+		<Contact minY={(h * 2.5) / 2 + timelineHeight} />
+	</section>
+</div>
 
 <style>
 	.left {

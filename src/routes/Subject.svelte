@@ -10,10 +10,9 @@
 	$: if (isActiveEasterEgg) document.body.classList.add('roll');
 
 	onMount(() => {
-		let easterEgg = document.querySelector('.programming');
+		let easterEgg = document.querySelector('.experience');
 		easterEgg?.addEventListener('click', roll);
 	});
-
 	function roll() {
 		isActiveEasterEgg = true;
 		setTimeout(() => {
