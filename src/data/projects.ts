@@ -18,6 +18,17 @@ interface Project {
 
 const projects: Project[] = [
 	{
+		title: 'SeaFishilization',
+		date: '08 apr. 2024',
+		discription:
+			"Sea Fishilazition is a game inspired on Civilization (VI) made for the FishFest GameJam by Maurits, Midas and Twan. We made this game using C++ and Raylib. Defend your city against waves of enemy's. Every X seconds a wave of enemy's spawn who wants to destroy your castle. It's your task to defend the castle. You have to do so by training units and placing tiles to improve production. The more waves you survive the bigger and stronger the waves get.",
+		comment: 'FishFest GameJam',
+		languages: ['C++'],
+		fakeFileName: 'SeaFishilization',
+		url: 'github.com/Twan-Reijinga/SeaFishilization',
+		cardType: 'full'
+	},
+	{
 		title: 'PWS AI Trafic Lights',
 		date: '01 feb. 2024',
 		discription:
