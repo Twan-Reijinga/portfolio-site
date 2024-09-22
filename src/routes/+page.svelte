@@ -35,7 +35,7 @@
 			<TitleSubtitle
 				title="Hello World!"
 				subtitle="I'm Twan"
-				comment="{age} year old programming enthusiast"
+				comment="{age} year old Computer Science student"
 				maxY={h / 2}
 			/>
 		</div>
