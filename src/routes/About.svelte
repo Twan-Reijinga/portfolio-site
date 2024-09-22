@@ -12,9 +12,9 @@
 	<h3 class="aboutText">
 		<span>Programming</span> is, apart from <span>skiing</span>,<br />
 		the greatest thing there is.<br />
-		Besides programming, you can find me<br />
-		<span>rowing</span> on the Schie at <span>Proteus<span> or<br />
-		help kids make <span>robots</span> at NewTechKids.<br />
+		Besides <span>Studing Computer Science</span> at <span>TU Delft</span>,<br>
+		you can find me <span>rowing</span> on the Schie at <span>Proteus<span><br />
+		or help kids make <span>robots</span> at NewTechKids.<br />
 	</h3>
 	<Subject text="Most used languages" image="programming" />
 	<!-- {#if y > h / 1.4} -->
