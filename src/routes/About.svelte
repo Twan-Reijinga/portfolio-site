@@ -12,7 +12,7 @@
 	<h3 class="aboutText">
 		<span>Programming</span> is, apart from <span>skiing</span>,<br />
 		the greatest thing there is.<br />
-		Besides <span>Studing Computer Science</span> at <span>TU Delft</span>,<br>
+		Besides Studing <span>Computer Science</span> at <span>TU Delft</span>,<br>
 		you can find me <span>rowing</span> on the Schie at <span>Proteus</span><br />
 		or help kids make <span>robots</span> at NewTechKids.<br />
 	</h3>
