@@ -59,7 +59,7 @@
 			title="ContactMe()"
 			subtitle="reijinga@twan"
 			subtitleAfterDot="space"
-			comment="Metis Montessori Lyceum"
+			comment="Delft University of Technology"
 			minY={(h * 2.5) / 2 + timelineHeight}
 		/>
 	{/if}
