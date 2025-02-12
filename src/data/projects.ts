@@ -96,7 +96,7 @@ const projects: Project[] = [
 		discription:
 			'Novata is a Hotel in the Casentino Hills in Italy. In a group of three we made an app that solves two big problems for the hotel. Firstly, there are minibars all over the village owned by Novanta where people could take drinks from. In the app you could register which item you took on you name so that you can get the bill later. Secondly, the app functioned as a sign up for experiences the hotel provided, like getting a massage or renting a bike.',
 		languages: ['React Native', 'Docker', 'TS', 'Postgress'],
-		fakeFileName: 'Slidify',
+		fakeFileName: 'Novanta',
 		img: novantaImg,
 		url: 'none',
 		cardType: 'full'
@@ -119,7 +119,7 @@ const projects: Project[] = [
 		discription:
 			'Multiplayer pixelnary was my first project where I tried to work with websockets to make a multiplayer game. The comsept is simple: like pixelnary you get something to draw, and you have to make a pixelart. The other persons in the group can guess. Next round someone else can draw. You can join server with codes and make your own.',
 		languages: ['JS', 'P5', 'NodeJS'],
-		fakeFileName: 'Slidify',
+		fakeFileName: 'Pixelnary',
 		url: 'github.com/Twan-Reijinga/multiplayer-pixelnary',
 		cardType: 'full'
 	},
@@ -216,15 +216,6 @@ const projects: Project[] = [
 		url: 'github.com/Twan-Reijinga/portfolio',
 		cardType: 'full'
 	}
-
-	// {
-	// 	title: 'slidify',
-	// 	date: '20 jul. 2025',
-	// 	discription:
-	// 		"The Slidify is a device meant to easily control music wirelessly from a mac/linux computer. This solves a number of problems. First, you never have to keep spotify (or other music apps) open on your computer again, because all the info can be read right from the Slidify's display. This can be handy to save screen space. Another function is to control music while your monitor is off, for when you want to work focused without distraction from your computer, for example.",
-	// 	fakeFileName: 'Slidify',
-	// 	cardType: 'full'
-	// }
 ];
 
 export default projects;
