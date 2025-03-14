@@ -24,7 +24,14 @@ const projects: Project[] = [
 			"For this project I collaborated with a group of six other Computer Science students to develop a live multi-user note taking application with Java Spring. We learned to work in weekly sprints and communicated professionally in semiweekly progress meetings. I learned a lot about the workflow in a team, leadership and build up a strong foundation on application development.',
 		languages: ['Java'],
 		fakeFileName: 'CSEP',
+		url: 'github.com/Twan-Reijinga/CSEP-net-note',
 		cardType: 'full'
+	},
+	{
+		title: 'Start TU Delft BSc Computer Science and Engineering',
+		comment: 'Univerity course finished 3 years in advance',
+		date: '16 dec. 2021',
+		cardType: 'small'
 	},
 	{
 		title: 'SeaFishilization',
