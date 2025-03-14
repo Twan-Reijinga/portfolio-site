@@ -21,7 +21,7 @@ const projects: Project[] = [
 		title: 'Colaborative multi-user note taking application',
 		date: '26 jan. 2025',
 		discription:
-			"For this project I collaborated with a group of six other Computer Science students to develop a live multi-user note taking application with Java Spring. We learned to work in weekly sprints and communicated professionally in semiweekly progress meetings. I learned a lot about the workflow in a team, leadership and build up a strong foundation on application development.',
+			"For this project I collaborated with a group of six other Computer Science students to develop a live multi-user note taking application with Java Spring. We learned to work in weekly sprints and communicated professionally in semiweekly progress meetings. I learned a lot about the workflow in a team, leadership and build up a strong foundation on application development.",
 		languages: ['Java'],
 		fakeFileName: 'CSEP',
 		url: 'github.com/Twan-Reijinga/CSEP-net-note',
