@@ -18,7 +18,7 @@ interface Project {
 
 const projects: Project[] = [
 	{
-		title: 'Colaborative multi-user note taking application',
+		title: 'CSEP net note application',
 		date: '26 jan. 2025',
 		discription:
 			"As part of the Collaborative Software Engineering Project course, I worked with a team of six Computer Science students to develop a live multi-user note-taking application using Java Spring. Our approach involved working in weekly sprints, with regular semiweekly progress meetings. Throughout the project, I gained valuable experience in teamwork, leadership, and professional collaboration.",
