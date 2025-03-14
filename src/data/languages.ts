@@ -19,9 +19,9 @@ const languages: Language[] = [
 	{ text: 'CSS', color: '#006EB6', textColor: '#fff' },
 	{ text: 'ELM', color: '#5C6278', textColor: '#fff' },
 	{ text: 'Unity', color: '#6D6D6D', textColor: '#fff' },
-	{ text: 'R', color: '#1F63B6', textColor: '#fff' },
+	// { text: 'R', color: '#1F63B6', textColor: '#fff' },
 	{ text: 'NodeJS', color: '#6cc24a', textColor: '#000' },
-	{ text: 'Java', color: '#ff9820', textColor: '#000' },
+	{ text: 'Java', color: '#ff9820', textColor: '#fff' },
 ];
 
 export default languages;
