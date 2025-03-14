@@ -64,7 +64,7 @@ const projects: Project[] = [
 		comment: 'Version 3',
 		languages: ['CSS', 'TS', 'Svelte'],
 		fakeFileName: 'Portfolio',
-		url: 'github.com/Twan-Reijinga/portfolio-site',
+		url: 'github.com/Twan-Reijinga/portcomfolio-site',
 		cardType: 'full'
 	},
 	{
@@ -81,7 +81,7 @@ const projects: Project[] = [
 		title: 'MazeSwap',
 		date: '09 jul. 2023',
 		discription:
-			'MazeSwap is a game made for the GMTK GameJam by Twan and Eliott. The GMTK GameJam is a online event where programmer all over the world build cool games in the span of 48 hours. The theme on the 2023 GMTK GameJam was ROLES REVERSED. MazeSwap is a game played by two people on the same keyboard. In MazeSwap you either have the role of hunter or runner. As the Runner you must get to the other side of the maze and press the button to locate the exit. Stay out of the way of the Hunter, or they will take your place. As the Hunter you must get close to the Runner and swap roles with them, thus becoming the Runner and turning the Runner into the Hunter.',
+			'MazeSwap is a game made for the GMTK GameJam by Twan and Eliott. The GMTK GameJam is a online event where programmers all over the world build cool games in the span of 48 hours. The theme on the 2023 GMTK GameJam was ROLES REVERSED. MazeSwap is a game played by two people on the same keyboard. In MazeSwap you either have the role of hunter or runner. As the Runner you must get to the other side of the maze and press the button to locate the exit. Stay out of the way of the Hunter, or they will take your place. As the Hunter you must get close to the Runner and swap roles with them, thus becoming the Runner and turning the Runner into the Hunter.',
 		comment: 'GMTK GameJam 2023',
 		languages: ['JS', 'P5'],
 		fakeFileName: 'MazeSwap',
@@ -133,7 +133,7 @@ const projects: Project[] = [
 		title: 'Multiplayer pixelnary',
 		date: '07 jul. 2022',
 		discription:
-			'Multiplayer pixelnary was my first project where I tried to work with websockets to make a multiplayer game. The comsept is simple: like pixelnary you get something to draw, and you have to make a pixelart. The other persons in the group can guess. Next round someone else can draw. You can join server with codes and make your own.',
+			'Multiplayer pixelnary was my first project where I tried to work with websockets to make a multiplayer game. The consept is simple: like pixelnary you get something to draw, and you have to make a pixelart. The other persons in the group can guess. Next round someone else can draw. You can join server with codes and make your own.',
 		languages: ['JS', 'P5', 'NodeJS'],
 		fakeFileName: 'Pixelnary',
 		url: 'github.com/Twan-Reijinga/multiplayer-pixelnary',
