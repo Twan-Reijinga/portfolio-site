@@ -12,7 +12,7 @@ const languages: Language[] = [
 	{ text: 'C++', color: '#007acc', textColor: '#fff' },
 	{ text: 'React Native', color: '#61dbfb', textColor: '#000' },
 	{ text: 'Docker', color: '#0db7ed', textColor: '#000' },
-	{ text: 'Postgress', color: '#316192', textColor: '#fff' },
+	{ text: 'PostgreSQL', color: '#316192', textColor: '#fff' },
 	{ text: 'MongoDB', color: '#00694A', textColor: '#fff' },
 	{ text: 'Svelte', color: '#FF3E00', textColor: '#fff' },
 	// { text: 'C#', color: '#984D94', textColor: '#fff' },

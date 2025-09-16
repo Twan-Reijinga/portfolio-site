@@ -111,7 +111,7 @@ const projects: Project[] = [
 		date: '10 feb. 2023',
 		discription:
 			'Novata is a Hotel in the Casentino Hills in Italy. In a group of three we made an app that solves two big problems for the hotel. Firstly, there are minibars all over the village owned by Novanta where people could take drinks from. In the app you could register which item you took on you name so that you can get the bill later. Secondly, the app functioned as a sign up for experiences the hotel provided, like getting a massage or renting a bike.',
-		languages: ['React Native', 'Docker', 'TS', 'Postgress'],
+		languages: ['React Native', 'Docker', 'TS', 'PostgreSQL'],
 		fakeFileName: 'Novanta',
 		img: novantaImg,
 		url: 'none',
