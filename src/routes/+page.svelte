@@ -17,10 +17,31 @@
 	let projectIndex = 0;
 	let timelineHeight: number;
 	let age = getAge();
+	let codeIndex = 0;
+    const code = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"]
 
 	setTimeout(() => {
 		loadTitleSubtitles = true;
 	}, 2400);
+	onMount(() => {
+		document.onkeydown = (event) => {
+			if (event.key === code[codeIndex]) {
+				codeIndex++;
+				if (codeIndex >= code.length) {
+					roll();
+				}
+			} else {
+				codeIndex = 0;
+			}
+		}
+	});
+
+	function roll() {
+		document.body.classList.add('roll');
+		setTimeout(() => {
+			document.body.classList.remove('roll');
+		}, 2000);
+	}
 </script>
 
 <svelte:head>
