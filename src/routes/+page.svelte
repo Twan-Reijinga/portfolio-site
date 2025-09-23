@@ -63,7 +63,7 @@
 		<TitleSubtitle
 			title="AboutMe()"
 			subtitle="I'm Twan"
-			comment="Studing @ TU Delft, living in The Hague"
+			comment="Studing @ TU Delft"
 			minY={h / 2}
 			maxY={(h * 2.5) / 2}
 		/>

@@ -14,7 +14,8 @@
 		the greatest thing there is.<br />
 		Besides Studing <span>Computer Science</span> at <span>TU Delft</span>,<br>
 		you can find me <span>rowing</span> on the Schie all day<br />
-		or build the new site with the <span>WebCie</span> at <span>Proteus-Eretes</span> <br />
+		or build the new site with the <span>WebCie</span><br /> 
+		at <span>Proteus-Eretes</span>.<br />
 	</h3>
 	<Subject text="Most used languages" image="programming" />
 	<!-- {#if y > h / 1.4} -->
