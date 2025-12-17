@@ -10,12 +10,11 @@
 <svelte:window bind:scrollY={y} bind:innerHeight={h} />
 <div class="aboutBox" transition:fade={{ duration: 100 }}>
 	<h3 class="aboutText">
-		<span>Programming</span> is, apart from <span>skiing</span>,<br />
+		<span>Programming</span> is, apart from <span>rowing</span>,<br />
 		the greatest thing there is.<br />
 		Besides Studing <span>Computer Science</span> at <span>TU Delft</span>,<br>
-		you can find me <span>rowing</span> on the Schie all day<br />
-		or build the new site with the <span>WebCie</span><br /> 
-		at <span>Proteus-Eretes</span>.<br />
+		you can find me in the competitive <span>rowing</span> team at <span>DSR Proteus-Eretes</span>.<br />
+		Or build the new site with the <span>WebCie</span>.<br /> 
 	</h3>
 	<Subject text="Most used languages" image="programming" />
 	<!-- {#if y > h / 1.4} -->
