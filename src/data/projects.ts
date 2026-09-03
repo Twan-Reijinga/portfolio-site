@@ -1,3 +1,4 @@
+import slapagochi from '$lib/assets/images/slapagochi.jpg';
 import mazeSwapImg from '$lib/assets/images/mazeswap.png';
 import traficSimImg from '$lib/assets/images/traficSim.png';
 import slidifyImg from '$lib/assets/images/slidify.jpeg';
@@ -18,12 +19,23 @@ interface Project {
 
 const projects: Project[] = [
 	{
+		title: 'Giro3D Piero internship project',
+		date: '6 apr. 2026',
+		discription:
+			"As part of the Software Project, I build on improving the Open Source 3D modeling software Piero with a team of five TU Delft students. We implemented advanced measurement tools, oriantation systems and camera controls. It was a great learning experience adapting to an existing profesional coding enviourment.",
+		languages: ['Docker', 'TS'],
+		fakeFileName: 'Piero',
+		url: 'https://gitlab.com/giro3d/piero',
+		cardType: 'full'
+	},
+	{
 		title: 'Slapagochi',
 		date: '6 apr. 2026',
 		discription:
-			"This app is a multiplayer game that you can play with one friend. Together you have to keep you fish alive by sleeping on time. Your fish goes level up when you collect enough XP, but dies when it takes to much damage by sleeping late.",
+			"This app is a multiplayer game that you can play with one friend. Together you have to keep you fish alive by sleeping on time. Your fish goes level up when you collect enough XP, but dies when it takes too much damage by sleeping late.",
 		languages: ['React Native'],
 		fakeFileName: 'Slapagochi',
+		img: slapagochi,
 		url: 'https://github.com/Twan-Reijinga/Slapagochi',
 		cardType: 'full'
 	},
