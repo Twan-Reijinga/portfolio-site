@@ -22,8 +22,8 @@ const projects: Project[] = [
 		title: 'Giro3D Piero internship project',
 		date: '6 apr. 2026',
 		discription:
-			"As part of the Software Project, I build on improving the Open Source 3D modeling software Piero with a team of five TU Delft students. We implemented advanced measurement tools, oriantation systems and camera controls. It was a great learning experience adapting to an existing profesional coding enviourment.",
-		languages: ['Docker', 'TS'],
+			"As part of the Software Project, I build on improving the open source 3D modeling software Piero with a team of five TU Delft students. We implemented advanced measurement tools, orientation systems and camera controls. It was a great learning experience adapting to an existing professional coding environment.",
+		languages: ['Vue', 'Docker', 'TS'],
 		fakeFileName: 'Piero',
 		url: 'https://gitlab.com/giro3d/piero',
 		cardType: 'full'
@@ -32,7 +32,7 @@ const projects: Project[] = [
 		title: 'Slapagochi',
 		date: '6 apr. 2026',
 		discription:
-			"This app is a multiplayer game that you can play with one friend. Together you have to keep you fish alive by sleeping on time. Your fish goes level up when you collect enough XP, but dies when it takes too much damage by sleeping late.",
+			"This app is a multiplayer game that you can play with one friend. Together you have to keep your fish alive by sleeping on time. Your fish goes level up when you collect enough XP, but dies when it takes too much damage by sleeping late.",
 		languages: ['React Native'],
 		fakeFileName: 'Slapagochi',
 		img: slapagochi,
@@ -43,7 +43,7 @@ const projects: Project[] = [
 		title: 'Coreblokjes randomizer',
 		date: '9 feb. 2026',
 		discription:
-			"In rowing, working on your core is important, but doing the same core exerciese over and over again is borring. The solution: the coreblokjes randomizer, that builds a new set every time.",
+			"In rowing, working on your core is important, but doing the same core exercises over and over again is boring. The solution: the core blokjes randomizer, which builds a new set every time.",
 		languages: ['JS'],
 		fakeFileName: 'Coreblokje',
 		url: 'coreblokjesrandomizer.twan.space',
@@ -53,7 +53,7 @@ const projects: Project[] = [
 		title: 'Waar Studeer je',
 		date: '6 jan. 2026',
 		discription:
-			"While studying, I learn the best by focussing together with friends, but it is hard to find eachother. Introducing WSJ: here you can show you friends where you are.",
+			"While studying, I learn the best by focusing together with friends, but it is hard to find each other. Introducing WSJ: Here you can show your friends where you are.",
 		languages: ['JS'],
 		fakeFileName: 'WaarStudeerJe',
 		url: 'wsj.twan.space',
@@ -63,7 +63,7 @@ const projects: Project[] = [
 		title: 'CSEP net note application',
 		date: '26 jan. 2025',
 		discription:
-			"As part of the Collaborative Software Engineering Project course, I worked with a team of six Computer Science students to develop a live multi-user note-taking application using Java Spring. Our approach involved working in weekly sprints, with regular semiweekly progress meetings. Throughout the project, I gained valuable experience in teamwork, leadership, and professional collaboration.",
+			"As part of the Collaborative Software Engineering Project course, I worked with a team of six computer science students to develop a live multi-user note-taking application using Java Spring. Our approach involved working in weekly sprints, with regular semiweekly progress meetings. Throughout the project, I gained valuable experience in teamwork, leadership, and professional collaboration.",
 		languages: ['Java'],
 		fakeFileName: 'CSEP',
 		url: 'github.com/Twan-Reijinga/CSEP-net-note',
@@ -79,7 +79,7 @@ const projects: Project[] = [
 		title: 'SeaFishilization',
 		date: '08 apr. 2024',
 		discription:
-			"Sea Fishilazition is a game inspired on Civilization (VI) made for the FishFest GameJam by Maurits, Midas and Twan. We made this game using C++ and Raylib. Defend your city against waves of enemy's. Every X seconds a wave of enemy's spawn who wants to destroy your castle. It's your task to defend the castle. You have to do so by training units and placing tiles to improve production. The more waves you survive the bigger and stronger the waves get.",
+			"Sea Fishilization is a game inspired by Civilization (VI) made for the FishFest GameJam by Maurits, Midas and Twan. We made this game using C++ and Raylib. Defend your city against waves of enemies. Every X seconds a wave of enemies spawns who want to destroy your castle. It's your task to defend the castle. You have to do so by training units and placing tiles to improve production. The more waves you survive the bigger and stronger the waves get.",
 		comment: 'FishFest GameJam',
 		languages: ['C++'],
 		fakeFileName: 'SeaFishilization',
