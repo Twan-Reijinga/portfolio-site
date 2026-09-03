@@ -18,6 +18,36 @@ interface Project {
 
 const projects: Project[] = [
 	{
+		title: 'Slapagochi',
+		date: '6 apr. 2026',
+		discription:
+			"This app is a multiplayer game that you can play with one friend. Together you have to keep you fish alive by sleeping on time. Your fish goes level up when you collect enough XP, but dies when it takes to much damage by sleeping late.",
+		languages: ['React Native'],
+		fakeFileName: 'Slapagochi',
+		url: 'https://github.com/Twan-Reijinga/Slapagochi',
+		cardType: 'full'
+	},
+	{
+		title: 'Coreblokjes randomizer',
+		date: '9 feb. 2026',
+		discription:
+			"In rowing, working on your core is important, but doing the same core exerciese over and over again is borring. The solution: the coreblokjes randomizer, that builds a new set every time.",
+		languages: ['JS'],
+		fakeFileName: 'Coreblokje',
+		url: 'coreblokjesrandomizer.twan.space',
+		cardType: 'full'
+	},
+	{
+		title: 'Waar Studeer je',
+		date: '6 jan. 2026',
+		discription:
+			"While studying, I learn the best by focussing together with friends, but it is hard to find eachother. Introducing WSJ: here you can show you friends where you are.",
+		languages: ['JS'],
+		fakeFileName: 'WaarStudeerJe',
+		url: 'wsj.twan.space',
+		cardType: 'full'
+	},
+	{
 		title: 'CSEP net note application',
 		date: '26 jan. 2025',
 		discription:
