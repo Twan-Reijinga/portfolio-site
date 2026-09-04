@@ -13,7 +13,7 @@
 	let h: number;
 
 	afterUpdate(() => {
-		clientHeight = h * 0.03;
+		clientHeight = h * 0.1;
 		clientHeights.forEach((x) => {
 			clientHeight += x + h * 0.01;
 		});
@@ -59,7 +59,7 @@
 					discription={project.discription}
 					fakeFileName={project.fakeFileName}
 					img={project.img}
-					url={project.url}
+					url={project.url ?? ''}
 					cardType={project.cardType}
 					activated={y > getScrollDistanceToDot(i)}
 				/>

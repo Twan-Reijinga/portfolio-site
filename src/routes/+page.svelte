@@ -15,6 +15,7 @@
 	let y = 0;
 	let h = 0;
 	let projectIndex = 0;
+	let pageHeight: number;
 	let timelineHeight: number;
 	let age = getAge();
 	let codeIndex = 0;
@@ -48,9 +49,9 @@
 	<title>Twan Reijinga | Portfolio</title>
 </svelte:head>
 
-<svelte:window bind:scrollY={y} bind:innerHeight={h} />
+<svelte:window bind:scrollY={y} bind:innerHeight={h}/>
 <SpaceBackground />
-<section class="left">
+<section class="left" bind:clientHeight={pageHeight}>
 	{#if loadTitleSubtitles}
 		<div class="" in:fade={{ duration: 1000 }}>
 			<TitleSubtitle
@@ -102,8 +103,9 @@
 		/>
 		<!-- {/if} -->
 	</section>
-	<section class="right" style="height: {timelineHeight}px">
-		<Contact minY={(h * 2.5) / 2 + timelineHeight} />
+	<section class="right">
+		<div style="height: {timelineHeight}px" />
+		<Contact minY={pageHeight + timelineHeight + h/2} />
 	</section>
 </div>
 
@@ -126,6 +128,7 @@
 			z-index: 2;
 			height: 100vh;
 			width: 100%;
+			max-width: 900px !important;
 		}
 		.right {
 			margin-left: 0;
