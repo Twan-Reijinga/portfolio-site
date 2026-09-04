@@ -21,9 +21,10 @@ const projects: Project[] = [
 	{
 		title: 'Giro3D Piero internship project',
 		date: '5 may 2026',
+		comment: 'As part of the Software Project course',
 		discription:
 			"As part of the Software Project, I build on improving the open source 3D modeling software Piero with a team of five TU Delft students. We implemented advanced measurement tools, orientation systems and camera controls. It was a great learning experience adapting to an existing professional coding environment.",
-		languages: ['Vue', 'Docker', 'TS'],
+		languages: ['Vue', 'Docker'],
 		fakeFileName: 'Piero',
 		url: 'https://gitlab.com/giro3d/piero',
 		cardType: 'full'
@@ -31,6 +32,7 @@ const projects: Project[] = [
 	{
 		title: 'Slapagochi',
 		date: '6 apr. 2026',
+		comment: 'Boosts my personal bedtime habbits every day!',
 		discription:
 			"This app is a multiplayer game that you can play with one friend. Together you have to keep your fish alive by sleeping on time. Your fish goes level up when you collect enough XP, but dies when it takes too much damage by sleeping late.",
 		languages: ['React Native'],
@@ -42,6 +44,7 @@ const projects: Project[] = [
 	{
 		title: 'Coreblokjes randomizer',
 		date: '9 feb. 2026',
+		comment: 'Used by EJL\'26 every day',
 		discription:
 			"In rowing, working on your core is important, but doing the same core exercises over and over again is boring. The solution: the core blokjes randomizer, which builds a new set every time.",
 		languages: ['JS'],
@@ -52,6 +55,7 @@ const projects: Project[] = [
 	{
 		title: 'Waar Studeer je',
 		date: '6 jan. 2026',
+		comment: 'Study with friends is better then alone',
 		discription:
 			"While studying, I learn the best by focusing together with friends, but it is hard to find each other. Introducing WSJ: Here you can show your friends where you are.",
 		languages: ['JS'],
@@ -60,8 +64,20 @@ const projects: Project[] = [
 		cardType: 'full'
 	},
 	{
+		title: 'Proteus-Eretes.nl Website',
+		date: '1 feb 2025',
+		comment: 'With the Webcie',
+		discription: 
+			"The Webcie is a commitie that builds the new site for the rowing association Protues-Eretes.",
+		languages: ['Vue'],
+		fakeFileName: 'Proteus-Eretes',
+		url: 'Proteus-Eretes.nl',
+		cardType: 'full',
+	},
+	{
 		title: 'CSEP net note application',
 		date: '26 jan. 2025',
+		comment: 'Collaborative Software Engineering Project',
 		discription:
 			"As part of the Collaborative Software Engineering Project course, I worked with a team of six computer science students to develop a live multi-user note-taking application using Java Spring. Our approach involved working in weekly sprints, with regular semiweekly progress meetings. Throughout the project, I gained valuable experience in teamwork, leadership, and professional collaboration.",
 		languages: ['Java'],
@@ -92,7 +108,7 @@ const projects: Project[] = [
 		discription:
 			'Our PWS (ProfielWerkStuk) research is focused on optimizing the traffic light system with artificial intelligence. For this purpose, we built a traffic simulation and controlled it with a reinforcement learning algorithm. Traffic lights are essential in our society worldwide. With the increasing number of road users, traffic light optimization is becoming an increasingly urgent issue. Great advances in technology and artificial intelligence offer opportunities to address this issue. Behind our current traffic lights are already complex algorithms that continuously make calculations to guide everyone from A to B as smoothly as possible. But how do these algorithms work? How can artificial intelligence improve this? Which algorithms are best suited? And what data does artificial intelligence need for efficient flow? These questions are at the heart of our comprehensive research.',
 		comment: '247 hours to make the PWS of our dreams',
-		languages: ['Unity', 'Python'],
+		languages: ['Unity', 'Python', 'C#'],
 		fakeFileName: 'AITraficLights',
 		img: traficSimImg,
 		url: 'github.com/Twan-Reijinga/TrafficLight-AI',

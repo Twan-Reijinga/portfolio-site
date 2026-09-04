@@ -1,10 +1,16 @@
 <script lang="ts">
 	export let url: string;
+	let isGithubLink: boolean =  false;
+	if (url.includes('git')) isGithubLink = true;
 </script>
 
 <a class="buttonBox" href={url} target="_blank">
 	<div class="button">
-		<h4>// View Github</h4>
+		{#if isGithubLink}
+			<h4>// View Github</h4>
+		{:else}
+			<h4>// View Project</h4>
+		{/if}
 	</div>
 	<div class="shadow" />
 </a>

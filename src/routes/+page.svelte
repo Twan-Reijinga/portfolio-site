@@ -128,7 +128,6 @@
 			z-index: 2;
 			height: 100vh;
 			width: 100%;
-			max-width: 900px !important;
 		}
 		.right {
 			margin-left: 0;

@@ -15,7 +15,6 @@
 	export let isWithProjLangs: boolean = false;
 	export let subtitleAfterDot = '';
 	export let projectIndex: number = 0;
-	console.log(projectIndex);
 
 	let y: number;
 	let loaded = false;
@@ -132,6 +131,7 @@
 			width: 100%;
 			padding: 0 20% 10px 0%;
 			margin: 0;
+			max-width: 900px;
 		}
 		.titleBox {
 			width: 100%;

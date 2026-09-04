@@ -16,15 +16,17 @@
 		you can find me in the competitive <span>rowing</span> team at <span>DSR Proteus-Eretes</span>.<br />
 		Or build the new site with the <span>WebCie</span>.<br /> 
 	</h3>
-	<Subject text="Most used languages" image="programming" />
+	<Subject text="Most used tools" image="programming" />
 	<!-- {#if y > h / 1.4} -->
 	<div class="languageCards" transition:fade={{ duration: 100 }}>
 		{#each languages as language}
+			{#if language.favorite}
 			<Language
 				text={language.text}
 				color={language.color}
 				textColor={language.textColor}
 			/>
+			{/if}
 		{/each}
 	</div>
 	<!-- {/if} -->
