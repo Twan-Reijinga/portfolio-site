@@ -128,10 +128,12 @@
 			z-index: 2;
 			height: 100vh;
 			width: 100%;
+			z-index: 10 !important;
 		}
 		.right {
 			margin-left: 0;
 			width: 100%;
+			z-index: 0 !important;
 		}
 	}
 </style>
