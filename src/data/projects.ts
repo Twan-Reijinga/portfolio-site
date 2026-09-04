@@ -32,7 +32,7 @@ const projects: Project[] = [
 	{
 		title: 'Slapagochi',
 		date: '6 apr. 2026',
-		comment: 'Boosts my personal bedtime habbits every day!',
+		comment: 'Boosts my personal bedtime habbits!',
 		discription:
 			"This app is a multiplayer game that you can play with one friend. Together you have to keep your fish alive by sleeping on time. Your fish goes level up when you collect enough XP, but dies when it takes too much damage by sleeping late.",
 		languages: ['React Native'],
@@ -234,8 +234,8 @@ const projects: Project[] = [
 		date: '28 jan. 2021',
 		discription:
 			"To get a better understanding about API's, I created a Telegram bot that listens to commands to modify a shopping list. You can create groups, add people to the group and add items and delete things from it when you are in the grocery store.",
-		languages: ['Python'],
-		fakeFileName: 'ProblemSolving',
+		languages: ['NodeJS'],
+		fakeFileName: 'Shopinglist',
 		url: 'github.com/Twan-Reijinga/shared-shoppinglist-bot-telegram',
 		cardType: 'full'
 	},
@@ -274,6 +274,7 @@ const projects: Project[] = [
 	{
 		title: 'Unity Roll a Ball',
 		date: '21 oct. 2020',
+		comment: 'first Unity game',
 		discription:
 			'First Unity game where you control a ball that has to roll through a parcour of abstacles. Later that year I followed up with a plane flying game in unity.',
 		languages: ['Unity'],
