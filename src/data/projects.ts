@@ -20,7 +20,7 @@ interface Project {
 const projects: Project[] = [
 	{
 		title: 'Giro3D Piero internship project',
-		date: '6 apr. 2026',
+		date: '5 may 2026',
 		discription:
 			"As part of the Software Project, I build on improving the open source 3D modeling software Piero with a team of five TU Delft students. We implemented advanced measurement tools, orientation systems and camera controls. It was a great learning experience adapting to an existing professional coding environment.",
 		languages: ['Vue', 'Docker', 'TS'],
